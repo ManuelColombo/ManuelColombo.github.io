@@ -1,0 +1,32 @@
+body{
+    background:#343434;
+    color:#fff;
+    font-size:18px;
+
+}
+article{
+    max-width:30em;
+    margin:0 auto;
+}
+h1, h2{
+    font-family: 'Permanent Marker', cursive;
+    color:#ddec54b3;
+    transform: rotate(-5deg) translateY(10px) translateX(-2px);
+    
+}
+@media screen and (min-width: 30em) {
+    h1, h2{
+        transform: rotate(-5deg) translateY(10px) translateX(-20px);
+    }
+}
+
+p,nav, li{
+    font-family: 'Crimson Text', serif;
+    line-height: 1.05;
+    font-variant: all-small-caps;
+    list-style: none;
+    } 
+
+a{
+    color:inherit;
+}   
