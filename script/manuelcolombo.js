@@ -3,7 +3,7 @@ apiKey = "yM898o598jOYl77EYKtVy8OnJbOjzRGl";
 $(function(){
    
 
-var jqxhr = $.ajax( "https://api.behance.net/v2/users/bananascivolare?client_id=" + apiKey, function() {
+var jqxhr = $.getJSONP( "https://api.behance.net/v2/users/bananascivolare?client_id=" + apiKey + "&callback=myCallbackFunction", function() {
   console.log( "success" );
 })
   .done(function(data) {
