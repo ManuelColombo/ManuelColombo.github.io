@@ -1,6 +1,6 @@
 body{
-    background:#343434;
-    color:#fff;
+    background:#121012;
+    color:#AB98AB;
     font-size:18px;
 
 }
@@ -9,8 +9,8 @@ article{
     margin:0 auto;
 }
 h1, h2{
-    font-family: 'Permanent Marker', cursive;
-    color:#ddec54b3;
+    font-family: system, 'Permanent Marker', cursive;
+    color:#E82886;
     transform: rotate(-5deg) translateY(10px) translateX(-2px);
     
 }
@@ -21,7 +21,7 @@ h1, h2{
 }
 
 p,nav, li{
-    font-family: 'Crimson Text', serif;
+    font-family: system, 'Crimson Text', serif;
     line-height: 1.05;
     font-variant: all-small-caps;
     list-style: none;
