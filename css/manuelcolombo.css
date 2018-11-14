@@ -4,6 +4,12 @@ body{
     font-size:18px;
 
 }
+
+h1, h2{
+    /*font-family: system, 'Permanent Marker', cursive;*/
+    color:#E82886;
+}
+/*
 article{
     max-width:30em;
     margin:0 auto;
@@ -30,3 +36,4 @@ p,nav, li{
 a{
     color:inherit;
 }   
+*/
