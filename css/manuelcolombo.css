@@ -1,39 +1,56 @@
-body{
-    background:#ececec;
-    color:#584f58;
-    font-size:18px;
-    font-family: system, sans-serif;
+body {
+  background: #ececec;
+  color: #584f58;
+  font-size: 1.25em;
+  font-family: system, sans-serif;
 }
 
-h1, h2{
-    /*font-family: system, 'Permanent Marker', cursive;*/
-    color:#E82886;
+h1,
+h2 {
+  font-family: system, 'Permanent Marker', cursive;
+  color: #e82886;
 }
-/*
-article{
-    max-width:30em;
-    margin:0 auto;
+
+article {
+  max-width: 40em;
+  margin: 0 auto;
 }
-h1, h2{
-    font-family: system, 'Permanent Marker', cursive;
-    color:#E82886;
-    transform: rotate(-5deg) translateY(10px) translateX(-2px);
-    
+h1,
+h2,
+h3 {
+  font-family: system, 'Permanent Marker', cursive;
+  color: #e82886;
+  transform: rotate(-5deg) translateY(10px) translateX(-2px);
 }
 @media screen and (min-width: 30em) {
-    h1, h2{
-        transform: rotate(-5deg) translateY(10px) translateX(-20px);
-    }
+  h1,
+  h2 {
+    transform: rotate(-5deg) translateY(10px) translateX(-20px);
+  }
 }
 
-p,nav, li{
-    font-family: system, 'Crimson Text', serif;
-    line-height: 1.05;
-    font-variant: all-small-caps;
-    list-style: none;
-    } 
-
-a{
-    color:inherit;
-}   
-*/
+p,
+nav,
+li {
+  font-family: system, 'Roboto Slab', serif;
+  line-height: 1.25;
+  list-style: none;
+}
+section:hover {
+  background: #000;
+  color: ivory;
+  padding: 0em 1em 1em;
+}
+section:hover h2 {
+  font-size: 300%;
+}
+section:hover h3 {
+  font-size: 200%;
+}
+section:hover p,
+section:hover li {
+  font-size: 2em;
+}
+a {
+  color: inherit;
+}
