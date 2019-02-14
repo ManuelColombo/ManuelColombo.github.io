@@ -20,12 +20,12 @@ h2,
 h3 {
   font-family: system, 'Permanent Marker', cursive;
   color: #e82886;
-  transform: rotate(-5deg) translateY(10px) translateX(-2px);
+  transform: rotate(-5deg) translateY(0em) translateX(-2px);
 }
 @media screen and (min-width: 30em) {
   h1,
   h2 {
-    transform: rotate(-5deg) translateY(10px) translateX(-20px);
+    transform: rotate(-5deg) translateY(0em) translateX(-20px);
   }
 }
 
@@ -40,12 +40,16 @@ section:hover {
   background: #000;
   color: ivory;
   padding: 0em 1em 1em;
+  border-radius: 2em;
+  width: 60em;
 }
 section:hover h2 {
   font-size: 300%;
+  transform: rotate(-5deg) translateY(0em) translateX(0.5em);
 }
 section:hover h3 {
   font-size: 200%;
+  transform: rotate(-5deg) translateY(0em) translateX(0.5em);
 }
 section:hover p,
 section:hover li {
