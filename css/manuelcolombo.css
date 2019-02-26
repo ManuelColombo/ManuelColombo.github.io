@@ -39,21 +39,33 @@ li {
 section:hover {
   background: #000;
   color: ivory;
-  padding: 0em 1em 1em;
   border-radius: 2em;
   width: 60em;
+  margin-left:-25%;
+  padding: 0 0 1rem 1rem;
+}
+section:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  filter: blur(50);
+  width: 100vm;
+  height: 100vh;
+  display: block;
+  content: " ";
 }
 section:hover h2 {
-  font-size: 300%;
+  font-size: 200%;
   transform: rotate(-5deg) translateY(0em) translateX(0.5em);
 }
 section:hover h3 {
-  font-size: 200%;
+  font-size: 161%;
   transform: rotate(-5deg) translateY(0em) translateX(0.5em);
 }
 section:hover p,
 section:hover li {
-  font-size: 2em;
+  font-size: 1em;
 }
 a {
   color: inherit;
