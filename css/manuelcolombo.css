@@ -4,7 +4,7 @@
 }
 
 body {
-  background: ##e5e5e5;
+  background: #e5e5e5;
   color: #333333;
   font-size: 1.25em;
   font-family: system, sans-serif;
@@ -36,23 +36,4 @@ aside {
 }
 aside li {
   display: inline-block;
-}
-
-section {
-  display: none;
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  padding: 32px;
-  width: 100vw;
-  height: 100vh;
-  background-color: yellow;
-}
-section.current {
-  display: block;
-}
-
-section#who {
-  margin-top: 15vh;
-  width: 14vw;
 }
