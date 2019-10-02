@@ -1,0 +1,89 @@
+// MIXINES
+@mixin bkgRow($spazi: 2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc((100vw - 184px) / #{$spazi});
+  &:after {
+    display: block;
+    content: '.';
+    text-indent: 9999px;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: #333333;
+    z-index: 10;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #f2f2f2;
+  color: #333333;
+  font-size: 1.25em;
+  font-family: system, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  z-index: 10;
+  left: 33px;
+  top: 30px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  @include bkgRow(2);
+}
+
+a,
+a:visited {
+  background: #f2f2f2;
+  color: #000;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 50;
+  text-decoration: none;
+}
+
+aside {
+  position: absolute;
+  z-index: 10;
+  right: -290px;
+  bottom: 0;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  @include bkgRow(3.5);
+}
+
+.main {
+  position: relative;
+  margin-top: 32px;
+  section {
+    height: calc(100vh - 64px);
+    display: flex;
+    justify-content: stretch;
+    img {
+      height: auto;
+    }
+  }
+}
