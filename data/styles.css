@@ -23,25 +23,25 @@
   color:#000000;
 }
 .heading_1 {
-  font-family:'Montserrat-Black', 'Montserrat Black', 'Montserrat';
-  font-weight:900;
-  font-style:normal;
+  font-family:'MB';
+  font-weight:;
+  font-style:;
   font-size:24px;
   letter-spacing:7px;
   text-align:left;
   text-transform:uppercase;
 }
 .heading_2 {
-  font-family:'LibreBaskerville-Regular', 'Libre Baskerville';
-  font-weight:400;
-  font-style:normal;
+  font-family:'LBR';
+  font-weight:;
+  font-style:;
   font-size:48px;
   text-align:left;
 }
 .heading_3 {
-  font-family:'LibreBaskerville-Italic', 'Libre Baskerville Italic', 'Libre Baskerville';
-  font-weight:400;
-  font-style:italic;
+  font-family:'LBI';
+  font-weight:;
+  font-style:;
   font-size:24px;
   text-align:left;
 }
@@ -66,9 +66,9 @@
   text-align:left;
 }
 .paragraph {
-  font-family:'Montserrat-Regular', 'Montserrat';
-  font-weight:400;
-  font-style:normal;
+  font-family:'MR';
+  font-weight:;
+  font-style:;
   font-size:18px;
   text-align:left;
 }
@@ -82,9 +82,9 @@
 .icon {
 }
 .heading_2_-_eng {
-  font-family:'Montserrat-Black', 'Montserrat Black', 'Montserrat';
-  font-weight:900;
-  font-style:normal;
+  font-family:'MB';
+  font-weight:;
+  font-style:;
   font-size:48px;
   text-align:left;
 }
@@ -96,9 +96,9 @@
   text-align:left;
 }
 .paragraph_-_eng {
-  font-family:'LibreBaskerville-Regular', 'Libre Baskerville';
-  font-weight:400;
-  font-style:normal;
+  font-family:'LBR';
+  font-weight:;
+  font-style:;
   font-size:18px;
   text-align:left;
 }
