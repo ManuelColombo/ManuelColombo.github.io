@@ -543,7 +543,7 @@
   border-width:0px;
   position:absolute;
   left:411px;
-  top:1903px;
+  top:1936px;
   width:289px;
   height:453px;
   display:flex;
@@ -1059,10 +1059,9 @@
   visibility:hidden;
 }
 #u25 {
-  border-width:0px;
-  position:absolute;
-  left:1146px;
-  top:374px;
+  position:fixed;
+  right:0px;
+  bottom:0px;
   width:25px;
   height:398px;
 }
@@ -1717,8 +1716,8 @@
 #u41 {
   border-width:0px;
   position:absolute;
-  left:110px;
-  top:1624px;
+  left:81px;
+  top:1670px;
   width:270px;
   height:60px;
   display:flex;
@@ -1740,7 +1739,7 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:380px;
+  width:475px;
   height:45px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
@@ -1753,9 +1752,9 @@
 #u42 {
   border-width:0px;
   position:absolute;
-  left:110px;
-  top:1696px;
-  width:380px;
+  left:10px;
+  top:1734px;
+  width:475px;
   height:45px;
   display:flex;
 }
@@ -1826,7 +1825,7 @@
   border-width:0px;
   position:absolute;
   left:509px;
-  top:1641px;
+  top:1622px;
   width:356px;
   height:58px;
   display:flex;
@@ -1861,8 +1860,8 @@
 #u45 {
   border-width:0px;
   position:absolute;
-  left:509px;
-  top:1725px;
+  left:610px;
+  top:1699px;
   width:381px;
   height:58px;
   display:flex;
@@ -1898,7 +1897,7 @@
   border-width:0px;
   position:absolute;
   left:610px;
-  top:1804px;
+  top:1775px;
   width:381px;
   height:572px;
   display:flex;
@@ -3675,12 +3674,12 @@ body.a {  background-color:rgba(0, 0, 0, 1);
   box-shadow:none;
 }
 #u25.a {
-  border-width:0px;
-  position:absolute;
-  left:1146px;
-  top:374px;
+  position:fixed;
+  right:0px;
+  bottom:0px;
   width:25px;
   height:398px;
+  overflow:hidden;
 }
 #u26.a {
 }
@@ -4101,7 +4100,7 @@ body.a {  background-color:rgba(0, 0, 0, 1);
   position:absolute;
   left:0px;
   top:0px;
-  width:380px;
+  width:475px;
   height:45px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
@@ -5598,12 +5597,12 @@ body.b {  background-color:rgba(245, 245, 245, 1);
   box-shadow:none;
 }
 #u25.b {
-  border-width:0px;
-  position:absolute;
-  left:332px;
-  top:437px;
+  position:fixed;
+  right:0px;
+  bottom:0px;
   width:25px;
   height:398px;
+  overflow:hidden;
 }
 #u26.b {
 }
@@ -6031,7 +6030,7 @@ body.b {  background-color:rgba(245, 245, 245, 1);
   position:absolute;
   left:0px;
   top:0px;
-  width:380px;
+  width:475px;
   height:45px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
