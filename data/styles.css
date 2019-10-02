@@ -23,8 +23,8 @@
   color:#000000;
 }
 .heading_1 {
-  font-family:'MB';
-  font-weight:;
+  font-family:'Montserrat';
+  font-weight:900;
   font-style:;
   font-size:24px;
   letter-spacing:7px;
@@ -32,16 +32,16 @@
   text-transform:uppercase;
 }
 .heading_2 {
-  font-family:'LBR';
+  font-family:'Libre Baskerville';
   font-weight:;
   font-style:;
   font-size:48px;
   text-align:left;
 }
 .heading_3 {
-  font-family:'LBI';
+  font-family:'Libre Baskerville';
   font-weight:;
-  font-style:;
+  font-style:italic;
   font-size:24px;
   text-align:left;
 }
@@ -66,8 +66,8 @@
   text-align:left;
 }
 .paragraph {
-  font-family:'MR';
-  font-weight:;
+  font-family:'Montserrat';
+  font-weight:600;
   font-style:;
   font-size:18px;
   text-align:left;
@@ -82,8 +82,8 @@
 .icon {
 }
 .heading_2_-_eng {
-  font-family:'MB';
-  font-weight:;
+  font-family:'Montserrat';
+  font-weight:900;
   font-style:;
   font-size:48px;
   text-align:left;
@@ -96,7 +96,7 @@
   text-align:left;
 }
 .paragraph_-_eng {
-  font-family:'LBR';
+  font-family:'Libre Baskerville';
   font-weight:;
   font-style:;
   font-size:18px;
