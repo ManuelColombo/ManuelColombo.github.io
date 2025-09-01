@@ -5,3 +5,5 @@ layout: base.njk
 # Benvenuto
 
 Qui trovi il mio [CV](/cv/), il [Portfolio](/portfolio/) e il [Blog](/blog/).
+
+Proviamo una modifica per vedere se GitHub Actions si attiva.
