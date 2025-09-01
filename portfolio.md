@@ -3,10 +3,11 @@ title: "Portfolio"
 layout: base.njk
 permalink: "/portfolio/"
 ---
+
 # Portfolio
 
 {% for item in collections.portfolio | reverse %}
-- [{{ item.data.title }}]({{ item.url }}){% if item.data.excerpt %} — {{ item.data.excerpt }}{% endif %}
+  {% set item = item %}{% include "card.njk" %}
 {% endfor %}
 
 
