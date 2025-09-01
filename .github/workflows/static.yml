@@ -4,7 +4,10 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["eleventy-site"]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
