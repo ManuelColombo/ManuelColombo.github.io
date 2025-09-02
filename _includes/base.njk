@@ -24,8 +24,6 @@
     <main>
       {{ content | safe }}
     </main>
-    <footer>
-      <small>© {{ now | date("yyyy") }}</small>
-    </footer>
+   {% include "footer.njk" %}
   </body>
 </html>
