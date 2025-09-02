@@ -1,11 +1,11 @@
 ---
-title: "Progetto Uno"
+title: "UX Lead on Stellantis"
 layout: base.njk
 permalink: "/approach/Stellantis/"
 tags: ["approach"]
 date: 2025-08-27
-thumbnail: "https://www.11ty.dev/img/built/FIy3o0n-oI-222.avif"
-excerpt: "Breve descrizione del progetto."
+thumbnail: ""
+excerpt: "Description of my years as UX Lead on Stellantis project at Publicis Sapient"
 ---
 # What I've done in years for Stellantis
 

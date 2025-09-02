@@ -16,15 +16,15 @@ While confidentiality limits what I can share publicly, I’m always open to dis
 
 *Feel free to reach out if you’d like to know more or connect!*
 
-<!--
 
 ## My projects
 
 
-{% for item in collections.portfolio | reverse %}
+{% for item in collections.approach | reverse %}
   {% set item = item %}{% include "card.njk" %}
 {% endfor %}
 
+<!--
 1. **Case Studies (2–3 recommended)**
    - *Stellantis Project (Publicis Sapient)*  
      - Overview, your role, research approach, key insights, impact on product decisions.
