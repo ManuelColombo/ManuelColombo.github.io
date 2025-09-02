@@ -1,10 +1,12 @@
 ---
 title: "Portfolio"
 layout: base.njk
-permalink: "/portfolio/"
+permalink: "/approach/"
 ---
 
-As a design lead and UX researcher, I specialize in driving user-centered innovation across diverse industries and multicultural teams. My work blends strategic vision with hands-on research, guiding organizations to align business goals with real user needs.
+# Strategic Design & Research Highlights
+
+As a design lead and UX researcher, I specialize in driving **user-centered innovation** across diverse industries and multicultural teams. My work blends strategic vision with hands-on research, guiding organizations to align business goals with real user needs.
 
 I lead research initiatives from discovery to activation, using methods like interviews, usability testing, and eye tracking to uncover actionable insights. My experience includes shaping editorial workflows for major news media, informing app design for financial services, and facilitating design-thinking workshops that spark creativity and collaboration.
 
@@ -14,8 +16,10 @@ While confidentiality limits what I can share publicly, I’m always open to dis
 
 *Feel free to reach out if you’d like to know more or connect!*
 
+<!--
 
-# Portfolio
+## My projects
+
 
 {% for item in collections.portfolio | reverse %}
   {% set item = item %}{% include "card.njk" %}
@@ -40,3 +44,4 @@ While confidentiality limits what I can share publicly, I’m always open to dis
 
 5. **Contact & Links**
    - Email, LinkedIn, Medium articles, relevant online profiles.
+ - -->
