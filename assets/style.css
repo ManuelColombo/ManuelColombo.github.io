@@ -7,6 +7,9 @@
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   margin: 0.5rem; color: var(--ink); background: var(--bg);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.6;
 }
 header nav{
     /* border-bottom: #000001 dashed 1px; */
@@ -102,10 +105,4 @@ h2{
     font-size: 6rem; 
   }
   
-}
-
-p{
-  font-weight: 200;
-  color: var(--ink);
-  line-height: 1.6;
 }
