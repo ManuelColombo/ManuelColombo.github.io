@@ -1,12 +1,12 @@
 ---
 title: "Portfolio"
 layout: base.njk
-permalink: "/portfolio/"
+permalink: "/approach/"
 ---
 
-# Portfolio
+# Strategic Design & Research Highlights
 
-As a design lead and UX researcher, I specialize in driving user-centered innovation across diverse industries and multicultural teams. My work blends strategic vision with hands-on research, guiding organizations to align business goals with real user needs.
+As a design lead and UX researcher, I specialize in driving **user-centered innovation** across diverse industries and multicultural teams. My work blends strategic vision with hands-on research, guiding organizations to align business goals with real user needs.
 
 I lead research initiatives from discovery to activation, using methods like interviews, usability testing, and eye tracking to uncover actionable insights. My experience includes shaping editorial workflows for major news media, informing app design for financial services, and facilitating design-thinking workshops that spark creativity and collaboration.
 
