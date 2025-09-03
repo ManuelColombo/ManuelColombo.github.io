@@ -48,8 +48,8 @@ Senior Design Lead with experience in UX research, design leadership, and digita
 
 
 ### Selected Publications & Talks
- - Medium Article: My Design Principles ↗
- - Collaborative Publication System Case Study ↗
+ - [Medium Article: My Design Principles ↗](https://uxdesign.cc/understand-your-own-design-principles-9950f6195621)
+ - [I'll speak at the world usability congress on Wednesday the 15th of October 2025 ↗](https://worldusabilitycongress.com/conference/)
 
 ### Lingue
 Italiano (Madrelingua), Inglese (Fluente)

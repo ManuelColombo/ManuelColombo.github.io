@@ -3,7 +3,8 @@ title: "Home"
 layout: base.njk
 ---
 # Where Curiosity Meets User Experience
-## Welcome to my website. 
+
+> I dwell on the island of what I know, always drawn to expand its curious coastline into the vast sea of the unknown.
 
 I am **Manuel Colombo**, Design Lead and UX Researcher with over 15 years of experience in complex digital projects. I help teams and organizations put users at the center of innovation, but I never settle for the obvious or the routine. I believe in questioning assumptions and exploring ideas from at least three perspectives: my own, the opposite, and a fresh, outsider’s view. This approach sparks new insights and helps uncover possibilities that conventional thinking often overlooks.
 
