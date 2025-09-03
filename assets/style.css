@@ -11,44 +11,17 @@ body {
   color: var(--ink);
   line-height: 1.6;
 }
-header nav{
-    /* border-bottom: #000001 dashed 1px; */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */
-    gap: 16px;
-    width: 100%;
-    max-width: var(--col);
-    margin: 0 auto;;
-}
-
-header nav a { padding: 0 1rem; 
-  color: var(--link); 
-  text-decoration: none; 
+header {
+  margin: 0 auto;
   text-align: center;
-  border-left: #000001 dashed 1px;
-  white-space: nowrap;
-  min-height: 2rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  height: 2rm; /* Example height */
-  box-sizing: border-box;
 }
-
-header nav a:nth-child(2n){border-right: #000001 dashed 1px;}
-
-/* When the container is wide enough, switch to 4 columns */
-@media (min-width: 768px) {
-  header nav{ 
-    grid-template-columns: repeat(4, 1fr);
-  }
-  header nav a:nth-child(2n){border-right: none;}
-  header nav a:last-child{border-right: #000001 dashed 1px;}
+header a{
+  font-weight: 900;
+  background-image: linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 10%));
+  color: transparent;
+  background-clip: text;
+  text-decoration: underline;
 }
-
-
 
 main {
   max-width: var(--col); margin: 1rem auto; background: #fff; padding: 1rem;
