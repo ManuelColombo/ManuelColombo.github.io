@@ -30,7 +30,7 @@ main {
 }
 img { max-width: 100%; height: auto; display: block; }
 pre, code { background: var(--bg); padding: .2em .4em; border-radius: 4px; }
-footer { text-align: center; color: #777; margin-top: 3rem; }
+footer { max-width: var(--col); color: #777; margin: 3rem auto 0; }
 
 
 /* cards */

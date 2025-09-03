@@ -14,7 +14,7 @@ I believe in making research accessible—translating complex findings into clea
 
 While confidentiality limits what I can share publicly, I’m always open to discussing my approach or specific challenges I’ve helped solve. As permissions allow, I’ll add dedicated project pages to this portfolio.
 
-*Feel free to reach out if you’d like to know more or connect!*
+*Feel free to reach out at **il.manuel.colombo @ gmail.com** if you’d like to know more or connect!*
 
 
 <!-- ## My projects
