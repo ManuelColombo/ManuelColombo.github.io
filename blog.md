@@ -10,4 +10,4 @@ I'm curious about everything so expect a variety of topics!
 
 {% for item in collections.blog | reverse %}
   {% set item = item %}{% include "card.njk" %}
-{% endfor %} -->
+{% endfor %} 

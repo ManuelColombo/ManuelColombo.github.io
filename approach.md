@@ -17,11 +17,11 @@ While confidentiality limits what I can share publicly, I’m always open to dis
 *Feel free to reach out at **il.manuel.colombo @ gmail.com** if you’d like to know more or connect!*
 
 
-<!-- ## My projects
+## My projects
 
 {% for item in collections.approach | reverse %}
   {% set item = item %}{% include "card.njk" %}
-{% endfor %} -->
+{% endfor %} 
 
 <!--
 1. **Case Studies (2–3 recommended)**
