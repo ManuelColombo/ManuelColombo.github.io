@@ -16,6 +16,7 @@ While confidentiality limits what I can share publicly, I’m always open to dis
 
 *Feel free to reach out at **il.manuel.colombo @ gmail.com** if you’d like to know more or connect!*
 
+<!--
 
 ## My projects
 
@@ -25,7 +26,6 @@ While confidentiality limits what I can share publicly, I’m always open to dis
 {% endfor %} 
 </section>
 
-<!--
 1. **Case Studies (2–3 recommended)**
    - *Stellantis Project (Publicis Sapient)*  
      - Overview, your role, research approach, key insights, impact on product decisions.
