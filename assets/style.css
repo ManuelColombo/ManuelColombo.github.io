@@ -72,7 +72,11 @@ footer { max-width: var(--col); color: #777; margin: 3rem auto 0; }
   padding: 0;
   gap:2rem;
   height: auto; /* Default: si adatta ai child */
-  min-height: 100%
+  min-height: 100%;
+}
+.collection a{
+  text-decoration: none;
+  color:black;
 }
 
 article.card{
@@ -86,6 +90,10 @@ article.card{
   display: block;
   flex:1;
 }
+article.card:hover{
+  box-shadow: 0 4px 16px #0004;
+}
+
 article.card img, article.card p{
   max-width: 300px;
 }
