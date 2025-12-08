@@ -15,34 +15,3 @@ I believe in making research accessible—translating complex findings into clea
 While confidentiality limits what I can share publicly, I’m always open to discussing my approach or specific challenges I’ve helped solve. As permissions allow, I’ll add dedicated project pages to this portfolio.
 
 *Feel free to reach out at **il.manuel.colombo @ gmail.com** if you’d like to know more or connect!*
-
-<!--
-
-## My projects
-
-<section class="collection">
-{% for item in collections.approach | reverse %}
-  {% set item = item %}{% include "card.njk" %}
-{% endfor %} 
-</section>
-
-1. **Case Studies (2–3 recommended)**
-   - *Stellantis Project (Publicis Sapient)*  
-     - Overview, your role, research approach, key insights, impact on product decisions.
-   - *Collaborative Publication System (Corriere della Sera)*  
-     - Problem, process, outcomes, influence on editorial workflows.
-   - *Crédit Agricole Consumer App*  
-     - Research methods (e.g., eye tracking), actionable insights, results.
-
-2. **Workshop Facilitation**
-   - Examples of design-thinking sessions and workshops led, including outcomes and team impact.
-
-3. **Research Activation**
-   - How you’ve translated complex insights into presentations and inspired product teams.
-
-4. **Leadership & Collaboration**
-   - Stories/examples of motivating teams, fostering collaboration, and driving customer-centricity.
-
-5. **Contact & Links**
-   - Email, LinkedIn, Medium articles, relevant online profiles.
- - -->
