@@ -19,9 +19,11 @@ While confidentiality limits what I can share publicly, I’m always open to dis
 
 ## My projects
 
+<section class="collection">
 {% for item in collections.approach | reverse %}
   {% set item = item %}{% include "card.njk" %}
 {% endfor %} 
+</section>
 
 <!--
 1. **Case Studies (2–3 recommended)**

@@ -16,11 +16,40 @@ header {
   text-align: center;
 }
 header a{
+  font-size: clamp(2rem, 8vw, 4rem);
   font-weight: 900;
   background-image: linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 10%));
   color: transparent;
   background-clip: text;
   text-decoration: underline;
+}
+header ul{
+  max-width: 728px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 16px auto;
+  padding: 0;
+  gap:2rem;
+  height: auto; /* Default: si adatta ai child */
+  min-height: 100%
+}
+header ul a{
+  flex:1;
+  font-size: 16px;
+  color:#fff;
+  background: linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 10%));
+  border-radius: 36px;
+  justify-content: center;
+  align-items: center; 
+  padding: 0.25em 2em;
+  margin: 0;
+  height: auto;
+}
+header ul a:hover{
+  color:#fffa;
+  background: linear-gradient(hsl(300, 100%, 10%),hsl(300, 100%, 25%));
+  text-shadow: #000d;
 }
 
 main {
@@ -34,16 +63,32 @@ footer { max-width: var(--col); color: #777; margin: 3rem auto 0; }
 
 
 /* cards */
+
+.collection{
+  display: flex;
+  justify-content:stretch;
+  flex-wrap: wrap;
+  margin: 16px auto;
+  padding: 0;
+  gap:2rem;
+  height: auto; /* Default: si adatta ai child */
+  min-height: 100%
+}
+
 article.card{
-  border: 1px solid #ddd;
-  border-radius: 8px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
+  border: 1px solid #ddd;
   box-shadow: 0 2px 8px #0001;
   padding: 1rem;
+  border-radius: 36px;
+  display: block;
+  flex:1;
 }
-
+article.card img, article.card p{
+  max-width: 300px;
+}
 /* Typogarphy */
 
 h1,h2,h3 { line-height: 1.2; }

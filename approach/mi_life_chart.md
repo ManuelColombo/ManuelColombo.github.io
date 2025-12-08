@@ -3,6 +3,9 @@ title: Skill Timeline
 layout: base.njk
 date: 2025-09-02
 tags: ["approach"]
+thumbnail: ../assets/approach/SkillChart.png
+excerpt: Nobody borns a master, my path to what I'm now is paved of good intention, errors and learnings.
+
 ---
 
 # Skills Timeline
