@@ -8,7 +8,7 @@
   --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   --mono: 'Courier New', Courier, monospace;
   --serif: Georgia, 'Times New Roman', Times, serif;
-  --font-size: 23px;
+  --font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 *{ box-sizing: border-box;
