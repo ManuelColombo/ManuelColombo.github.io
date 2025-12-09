@@ -1,7 +1,9 @@
 // .eleventy.js
 const dateFilter = require('nunjucks-date-filter');
+const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss")
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(lightningCSS);
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addNunjucksFilter('date', dateFilter);
   return {
@@ -15,3 +17,5 @@ module.exports = function(eleventyConfig) {
     dataTemplateEngine: "njk"
   };
 };
+
+
