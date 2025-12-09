@@ -1,59 +1,88 @@
 /* assets/style.css */
-:root { --ink:#222; --bg:#f9f9f9; --link:#0b72d2; --col:760px}
+:root { 
+  --ink:hsl(0 17% 28% / 1); 
+  --behind:#e6e6e6; 
+  --bg:#f9f9f9; 
+  --link:#0b72d2; 
+  --col: 960px;
+  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --mono: 'Courier New', Courier, monospace;
+  --serif: Georgia, 'Times New Roman', Times, serif;
+  --font-size: 23px;
+}
 
 *{ box-sizing: border-box;
  overflow-wrap: break-word; }
 
 body {
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  margin: 0.5rem; color: var(--ink); background: var(--bg);
+/*Box model stuff*/
+  margin: 0.5rem; color: var(--ink); background: var(--behind);
+  margin: 0.5rem; color: var(--ink); background: var(--behind);
+/*Typography stuff*/
+  font-family: var(--serif);
   font-weight: 300;
+  font-size: var(--font-size);
+  margin: 0.5rem; color: var(--ink); background: var(--behind);
   color: var(--ink);
+/*Miscellaneous*/
   line-height: 1.6;
 }
+
 header {
   margin: 0 auto;
   text-align: center;
-}
-header a{
-  font-size: clamp(2rem, 8vw, 4rem);
-  font-weight: 900;
-  background-image: linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 10%));
-  color: transparent;
-  background-clip: text;
-  text-decoration: underline;
-}
-header ul{
-  max-width: 728px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 16px auto;
-  padding: 0;
-  gap:2rem;
-  height: auto; /* Default: si adatta ai child */
-  min-height: 100%
-}
-header ul a{
-  flex:1;
-  font-size: 16px;
-  color:#fff;
-  background: linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 10%));
-  border-radius: 36px;
-  justify-content: center;
-  align-items: center; 
-  padding: 0.25em 2em;
-  margin: 0;
-  height: auto;
-}
-header ul a:hover{
-  color:#fffa;
-  background: linear-gradient(hsl(300, 100%, 10%),hsl(300, 100%, 25%));
-  text-shadow: #000d;
+  h2 { border: none;}
+  
+  a{
+  /*Box model stuff*/
+    background-clip: text;
+    background-image: linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 10%));
+  /*Typography stuff*/
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 900;
+    text-decoration: underline;
+    color: transparent;
+  }
+
+  ul{
+    max-width: 728px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 16px auto;
+    padding: 0;
+    gap:2rem;
+    height: auto; /* Default: si adatta ai child */
+    min-height: 100%;
+
+    a{
+      flex:1;
+      font-size: 16px;
+      color:#fff;
+      background: linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 10%));
+      border-radius: 36px;
+      justify-content: center;
+      align-items: center; 
+      padding: 0.25em 2em;
+      margin: 0;
+      height: auto;
+      text-decoration: none;
+      font-family: var(--sans);
+      
+      &:hover{
+        color:#fffa;
+        background: linear-gradient(hsl(300, 100%, 10%),hsl(300, 100%, 25%));
+        text-shadow: #000d;
+      }
+    }
+  }
 }
 
 main {
-  max-width: var(--col); margin: 1rem auto; background: #fff; padding: 1rem;
+  max-width: var(--col);
+  margin: 1rem auto; 
+  background: var(--bg); 
+  padding: 1rem;
   border-radius: 10px; 
   /* box-shadow: 0 2px 12px #0001; */
 }
@@ -73,10 +102,11 @@ footer { max-width: var(--col); color: #777; margin: 3rem auto 0; }
   gap:2rem;
   height: auto; /* Default: si adatta ai child */
   min-height: 100%;
-}
-.collection a{
-  text-decoration: none;
-  color:black;
+
+  a{
+    text-decoration: none;
+    color:black;
+  }
 }
 
 article.card{
@@ -99,10 +129,16 @@ article.card img, article.card p{
 }
 /* Typogarphy */
 
-h1,h2,h3 { line-height: 1.2; }
-h1, strong, a:hover{ background-image: linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 10%));
-    color: transparent;
-    background-clip: text;}
+h1,h2,h3,h4,h5,h6 { 
+  line-height: 1.2; 
+  font-family: var(--sans);
+}
+
+h1,h2,h3,h4,h5,h6, strong, a:hover{ 
+  background-image: linear-gradient(hsl(300, 100%, 25%), hsl(300, 100%, 10%));
+  color: transparent;
+  background-clip: text;
+}
 
 
 h1{ 

@@ -15,3 +15,15 @@ I believe in making research accessible—translating complex findings into clea
 While confidentiality limits what I can share publicly, I’m always open to discussing my approach or specific challenges I’ve helped solve. As permissions allow, I’ll add dedicated project pages to this portfolio.
 
 *Feel free to reach out at **il.manuel.colombo @ gmail.com** if you’d like to know more or connect!*
+
+## Italiano
+### Design Strategico & Ricerca — Punti Salienti
+Come design lead e UX researcher, mi concentro sull’innovazione incentrata sull’utente in settori diversi e in team multiculturali. Il mio lavoro combina visione strategica e ricerca pratica, aiutando le organizzazioni ad allineare gli obiettivi di business con i bisogni reali degli utenti.
+
+Guido iniziative di ricerca dalla scoperta all’attivazione, utilizzando metodi come interviste, test di usabilità e tracciamento oculare per individuare insight azionabili. Ho esperienza nel rimodellare workflow editoriali per grandi testate, nel definire soluzioni per app nel settore finanziario e nel facilitare workshop di design thinking che stimolano creatività e collaborazione.
+
+Rendo la ricerca accessibile: traduco risultati complessi in narrazioni chiare e persuasive che responsabilizzano i team e orientano le decisioni di prodotto. Il mio stile di leadership si basa su empatia, curiosità e sulla promozione di una cultura in cui ogni voce contribuisce a risultati significativi.
+
+Poiché molti progetti sono soggetti a vincoli di riservatezza, non sempre posso mostrare materiali pubblici; rimango però disponibile a discutere il mio approccio o casi specifici su richiesta. Quando sarà possibile, aggiungerò pagine dedicate ai singoli progetti all’interno di questo portfolio.
+
+*Per saperne di più o metterti in contatto: scrivimi a il.manuel.colombo @ gmail.com.*
