@@ -1,0 +1,1 @@
+- Zorro e batman eroi ricchi che si fanno giustizia da soli. Uno contro un potere criminale, l'altro contro i criminali che il potere non riesce a fermare.

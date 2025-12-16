@@ -89,7 +89,13 @@ main {
 img { max-width: 100%; height: auto; display: block; }
 pre, code { background: var(--bg); padding: .2em .4em; border-radius: 4px; }
 footer { max-width: var(--col); color: #777; margin: 3rem auto 0; }
-
+blockquote{
+  font-size: calc(1.25 * var(--font-size));
+  border-left: 1px dashed var(--ink);
+  padding-left: 1rem;
+  margin-left: 0.25rem;
+  font-style: italic;
+}
 
 /* cards */
 

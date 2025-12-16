@@ -17,8 +17,20 @@ While confidentiality limits what I can share publicly, I’m always open to dis
 *Feel free to reach out at **il.manuel.colombo @ gmail.com** if you’d like to know more or connect!*
 
 ## Italiano
-### Design Strategico & Ricerca — Punti Salienti
-Come design lead e UX researcher, mi concentro sull’innovazione incentrata sull’utente in settori diversi e in team multiculturali. Il mio lavoro combina visione strategica e ricerca pratica, aiutando le organizzazioni ad allineare gli obiettivi di business con i bisogni reali degli utenti.
+### Il mio approccio al Design: Strategia & Ricerca
+
+> Un designer progetta.   
+
+Questa frase basterebbe a spiegare il modo in cui mi approccio al mestiere. Forse però vale la pena di scavare più a fondo. Quando si parla di Design Leadership, di User research e di Business transformation, ci si sposta dal progettare pure e semplice, verso qualcosa di più sfumato. 
+
+La pratica e il mestiere del designer restano la base culturale e tecnica che mi permette di fare un passo avanti: definire le strategie digitali per allineare gli obiettivi di business con i bisogni reali degli utenti.
+
+ Ci si concentra sul valore. Il valore è quello che cerchiamo per i nostri clienti, per i nostri utenti. Il valore è quell'intangibile che fa la differenza tra un'esperienza memorabile e una che è meglio dimenticare. 
+
+ Per dare la caccia a quel valore occorre allargare lo sguardo al di là del digital design e poi restringerlo sul singolo pixel. 
+ La vista deve abbracciare l'infinitamente grande e l'infinitamente piccolo: i contesti di mercato e la risoluzione dei device, lo spirito del tempo e il tempo di caricamento delle pagine. 
+
+  così come il dettaglio delle micro animazioni, il modo in cui le interfacce interagiscono coi device, 
 
 Guido iniziative di ricerca dalla scoperta all’attivazione, utilizzando metodi come interviste, test di usabilità e tracciamento oculare per individuare insight azionabili. Ho esperienza nel rimodellare workflow editoriali per grandi testate, nel definire soluzioni per app nel settore finanziario e nel facilitare workshop di design thinking che stimolano creatività e collaborazione.
 
