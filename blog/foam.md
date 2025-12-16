@@ -1,7 +1,7 @@
 ---
-title: Foam
+title: Foam IA Writer e usare gli strumenti giusti.
 layout: base.njk
-date: 2025-12-08
+date: 2025-12-16
 tags: ["blog"]
 permalink: "/blog/foam/"
 ---
