@@ -10,19 +10,20 @@ permalink: "/blog/foam/"
 
 Ho iniziato a tenere le mie note su Obsidian, ma avevo dei grossi problemi di sync tra Mac, iPad e telefono. 
 Allora sono passato a gitHub per tenere tutto sincronizzato e a Visual studio code per scrivere e gestire la repository. 
-Una delle funzioni che mi avevano incuriosito di Obsidian era la mappa delle connessioni. Avrà un nome tecnico, mi sembra Graph View, io la chiamavo la ragnatela delle note. Questa qui:
+Una delle funzioni che mi avevano incuriosito di Obsidian era la mappa delle connessioni. Avrà un nome tecnico, mi sembra Graph View, io la chiamavo la ragnatela delle note.  
+Questa qui:  
 ![Immagine Graph view](https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/Attachments/obsidian-graph-view.png)
 
 Passando a visuale studio code ho visto che esisteva un’estensione: FOAM. 
 Foam permette una vista simile e allora ho iniziato a strutturare la mia libreria di note per rendere Foam qualcosa di utile e non solo un bel giochino [[NoteTakingFoam]]
 
-![alt da lontano, dopo solo un giorno di applicazione](../assets/blog/image.png)
+![alt da lontano, dopo solo un giorno di applicazione](../../assets/blog/image.png)
 
-![Da vicino, negli hashtag più connessi](../assets/blog/image-1.png)
+![Da vicino, negli hashtag più connessi](../../assets/blog/image-1.png)
 
 Un tempo era tutto così, non c'era nulla che si collegasse a nulla. Avevo le mie directory, i file erano strapieni di contenuti e diventavano illeggibili (lo sono ancora)
 
-![Come era prima, nelle aree periferiche](../assets/blog/image-2.png)
+![Come era prima, nelle aree periferiche](../../assets/blog/image-2.png)
 
 Adesso continua ad esserci il nulla. 
 Continua a non essere uno strumento di conoscenza, continua a non servire a far emergere delle connessioni tra i vari argomenti.
