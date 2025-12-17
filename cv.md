@@ -1,15 +1,16 @@
 ---
-title: "Curriculum"
+title: "Curriculum vitae"
 layout: base.njk
 permalink: "/cv/"
 ---
-# About Me
 
-**Manuel Colombo**  
-Experience Lead, Publicis Sapient Italy  
+# {{ title }}
+
+## Manuel Colombo  
+**Experience Lead**, Publicis Sapient Italy  
 Cuggiono, Lombardia, Italia  
-www.linkedin.com/in/manuelcolombo  
-colombo.design@gmail.com
+[linkedin :: manuelcolombo](www.linkedin.com/in/manuelcolombo)  
+[Mail :: il.manuel.colombo](mailto:il.manuel.colombo@gmail.com)
 
 ### Profile
 

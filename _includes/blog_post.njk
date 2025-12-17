@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title or "Il mio sito" }}</title>
+    <meta name="description" content="{{ description or 'CV · Portfolio · Blog' }}">
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <meta property="og:title" content="{{ title or 'Il mio sito' }}">
+    <meta property="og:description" content="{{ description or 'CV · Portfolio · Blog' }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url }}">
+  </head>
+  <body>
+    {% include "breadcrumb.njk" %}
+    <main>
+      {{ content | safe }}
+      <script src="https://utteranc.es/client.js"
+        repo="ManuelColombo/ManuelColombo.github.io"
+        issue-term="pathname"
+        theme="boxy-light"
+        crossorigin="anonymous"
+        async>
+     </script>
+    </main>
+   {% include "footer.njk" %}
+  </body>
+</html>

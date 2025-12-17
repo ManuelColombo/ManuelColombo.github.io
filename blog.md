@@ -3,7 +3,8 @@ title: "Blog"
 layout: base.njk
 permalink: "/blog/"
 ---
-# My Ideas
+# Blog
+## My Ideas
 
 Here I share thoughts and reflections on design, UX research, and unrelated topics. My aim is to foster discussion and exchange ideas with fellow professionals and enthusiasts.
 > I'm curious about everything so expect a variety of topics! 
@@ -13,9 +14,16 @@ Here I share thoughts and reflections on design, UX research, and unrelated topi
 *Qui condivido i miei pensieri e le mie riflessioni sul design, sulla ricerca UX e sulla vita in generale. Il mio obiettivo è quello di alimentare la discussione e scambiare idee con altri professionisti o persone interessate a questi argomenti*
 > Sono curioso di più o meno tutto, quindi aspettatevi una gran varietà di argomenti!
 
+{% if collections.blog %}
+<section class="wrapper">
 {% for item in collections.blog | reverse %}
   {% set item = item %}{% include "card.njk" %}
+  {% set item = item %}{% include "card.njk" %}
+  {% set item = item %}{% include "card.njk" %}
+  {% set item = item %}{% include "card.njk" %}
 {% endfor %} 
+</section>
+{% endif%}
 
 ### Prossimi articoli in pipeline:
 

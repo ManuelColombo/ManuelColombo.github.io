@@ -1,11 +1,10 @@
 <!-- _includes/card.njk -->
-<a href="{{ item.url }}">
-  <article class="card">
-  <h3>{{ item.data.title }}</h3>
-  {% if item.data.thumbnail %}
-    <img src="{{ item.data.thumbnail }}" alt="{{ item.data.title }}">
-  {% endif %}
-  {% if item.data.excerpt %}
-    <p>{{ item.data.excerpt }}</p>
-  {% endif %}
-</article></a>
+<a class="card" href="{{ item.url }}">
+   <figure class="card-figure">
+      <img src="{{ item.data.thumbnail }}" alt="{{ item.data.title + item.data.excerpt }}">
+    </figure>
+    <p>
+      <strong>{{ item.data.title }}</strong>
+      {{ item.data.excerpt | safe }}
+    </p>
+</a>

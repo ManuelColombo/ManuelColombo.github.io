@@ -4,7 +4,8 @@ layout: base.njk
 permalink: "/approach/"
 ---
 
-# Strategic Design & Research Highlights
+# Portfolio
+## Strategic Design & Research Highlights
 
 As a design lead and UX researcher, I specialize in driving **user-centered innovation** across diverse industries and multicultural teams. My work blends strategic vision with hands-on research, guiding organizations to align business goals with real user needs.
 
