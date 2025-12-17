@@ -1,12 +1,15 @@
 ---
-title: Foam IA Writer e usare gli strumenti giusti.
-layout: base.njk
+layout: blog_post.njk
 date: 2025-12-16
 tags: ["blog"]
 permalink: "/blog/foam/"
+title: "L'ossessione degli strumenti giusti"
+thumbnail: https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/Attachments/obsidian-graph-view.png
+excerpt: "Foam, viisual studio Code, Github, IA Writer. Tutto perché non si più usare carta e penna per prendere nota dei pensieri." 
 ---
 
-# Note Taking Foam
+# {{ title }}
+## Foam IA Writer e usare gli strumenti giusti.
 
 Ho iniziato a tenere le mie note su Obsidian, ma avevo dei grossi problemi di sync tra Mac, iPad e telefono. 
 Allora sono passato a gitHub per tenere tutto sincronizzato e a Visual studio code per scrivere e gestire la repository. 
