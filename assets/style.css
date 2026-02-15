@@ -183,7 +183,7 @@ blockquote{
       transform: scale(0.99);
       text-decoration: none;
     }
-  }
+    
 }
 
 
@@ -203,7 +203,7 @@ h1,h2,h3,h4,h5,h6, strong, a:hover{
   border-bottom: none;
 }
 
-h1 { font-size: var(--h1-size); line-height: 1.2; font-weight: 800; }
+/* h1 { font-size: var(--h1-size); line-height: 1.2; font-weight: 800; } */
 h2 { font-size: var(--h2-size); line-height: 1.3; font-weight: 700; }
 h3 { font-size: var(--h3-size); line-height: 1.4; font-weight: 600; }
 h4 { font-size: var(--h4-size); line-height: 1.4; font-weight: 600; }
