@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+      - Local_writing
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: |
+          if [ "${{ github.ref_name }}" == "master" ]; then
+            echo "Building for production (master)"
+            npm run build
+            DEPLOY_DIR="_site"
+            TARGET_DIR="."
+          else
+            echo "Building for preview (Local_writing)"
+            PATH_PREFIX=/preview npm run build
+            DEPLOY_DIR="_site"
+            TARGET_DIR="preview"
+          fi
+          echo "DEPLOY_DIR=$DEPLOY_DIR" >> $GITHUB_ENV
+          echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ env.DEPLOY_DIR }}
+          destination_dir: ${{ env.TARGET_DIR }}
+          keep_files: ${{ github.ref_name != 'master' }}
+          publish_branch: gh-pages
