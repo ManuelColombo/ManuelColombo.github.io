@@ -1,11 +1,11 @@
 <header>
   <nav>
     <!-- Breadcrumb on the left -->
-    <a href="/">MANUEL COLOMBO</a>
+    <a href="{{ '/' | url }}">MANUEL COLOMBO{% if isStaging %} <span style="color: #8b00ff; font-size: 0.7em;">[STAGING]</span>{% endif %}</a>
     <div class="menu">
-      <a href="/cv/">CV</a>
-      <a href="/approach/">Portfolio</a>
-      <a href="/blog/">Blog</a>
+      <a href="{{ '/cv/' | url }}">CV</a>
+      <a href="{{ '/approach/' | url }}">Portfolio</a>
+      <a href="{{ '/blog/' | url }}">Blog</a>
     </div>
   </nav>
 </header>

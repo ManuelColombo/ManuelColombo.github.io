@@ -6,6 +6,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(lightningCSS);
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addNunjucksFilter('date', dateFilter);
+
+  // Global data: detect if we're in staging
+  eleventyConfig.addGlobalData("isStaging", process.env.PATH_PREFIX === "/preview");
+  eleventyConfig.addGlobalData("pathPrefix", process.env.PATH_PREFIX || "/");
+
   return {
     dir: {
       input: ".",
