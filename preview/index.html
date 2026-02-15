@@ -3,24 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home</title>
+    <title>STG :: Home</title>
     <meta name="description" content="CV · Portfolio · Blog">
-    <link rel="stylesheet" href="/assets/style.css" />
-    <link rel="icon" href="/assets/favicon.ico" />
-    <meta property="og:title" content="Home">
+    <link rel="stylesheet" href="/preview/assets/style.css" />
+    <link rel="icon" href="/preview/assets/favicon.ico" />
+    <meta property="og:title" content="STG :: Home">
     <meta property="og:description" content="CV · Portfolio · Blog">
     <meta property="og:type" content="website">
     <meta property="og:url" content="/">
+    
+    <style>
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: #8b00ff;
+        z-index: 9999;
+      }
+    </style>
+    
   </head>
-  <body>
+  <body class="staging">
     <header>
   <nav>
     <!-- Breadcrumb on the left -->
-    <a href="/">MANUEL COLOMBO</a>
+    <a href="/preview/">MANUEL COLOMBO <span style="color: #8b00ff; font-size: 0.7em;">[STAGING]</span></a>
     <div class="menu">
-      <a href="/cv/">CV</a>
-      <a href="/approach/">Portfolio</a>
-      <a href="/blog/">Blog</a>
+      <a href="/preview/cv/">CV</a>
+      <a href="/preview/approach/">Portfolio</a>
+      <a href="/preview/blog/">Blog</a>
     </div>
   </nav>
 </header>
@@ -41,10 +55,10 @@
       If you feel the need to navigate across pages with a good old sitemap, here are some useful links:
     </p>
     <ul>
-      <li><a href="/">Welcome</a></li>
-      <li><a href="/cv/">Curriculum Vitae</a></li>
-      <li><a href="/approach/">Design Approach and Portfolio</a></li>
-      <li><a href="/blog/">The blog of my Ideas</a></li>
+      <li><a href="/preview/">Welcome</a></li>
+      <li><a href="/preview/cv/">Curriculum Vitae</a></li>
+      <li><a href="/preview/approach/">Design Approach and Portfolio</a></li>
+      <li><a href="/preview/blog/">The blog of my Ideas</a></li>
     </ul>
   </div> 
   <small>© 2026</small>
