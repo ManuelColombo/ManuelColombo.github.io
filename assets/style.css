@@ -140,7 +140,7 @@ blockquote{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 2em auto;
-  max-width: $max_width;
+  max-width: var(--col);
   padding: 0;
   row-gap: 20px;
   @media (max-width: 720px) {
@@ -183,7 +183,8 @@ blockquote{
       transform: scale(0.99);
       text-decoration: none;
     }
-    
+
+  }
 }
 
 
