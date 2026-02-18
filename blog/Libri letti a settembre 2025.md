@@ -3,7 +3,8 @@ layout: blog_post.njk
 date: 2025-12-16
 tags: ["blog"]
 permalink: "/blog/letture-settembre-2025/"
-title: "I libri che ho letto a Sttembre 2025"
+title: "I libri che ho letto a Settembre 2025"
+category: "letture"
 thumbnail: https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6e181a0e9c94b8efe073f2a1dd3e8281d1a8abf288cd1eda3323eb812f1e79d73ccd65b3073edae4f160fc3972f2b3bfaf
 excerpt: "Quello che leggo spiega molto di quello che penso. Molto più di quello che scrivo" 
 ---
