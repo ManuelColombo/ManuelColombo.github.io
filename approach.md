@@ -1,6 +1,6 @@
 ---
 title: "Portfolio"
-layout: base.njk
+layout: blog_post.njk
 permalink: "/approach/"
 ---
 
@@ -16,6 +16,15 @@ I believe in making research accessible—translating complex findings into clea
 While confidentiality limits what I can share publicly, I’m always open to discussing my approach or specific challenges I’ve helped solve. As permissions allow, I’ll add dedicated project pages to this portfolio.
 
 *Feel free to reach out at **il.manuel.colombo @ gmail.com** if you’d like to know more or connect!*
+
+{% if collections.approach %}
+<section class="wrapper">
+{% for item in collections.approach | reverse %}
+  {% set item = item %}{% include "card.njk" %}
+{% endfor %} 
+</section>
+{% endif%}
+
 
 ## Italiano
 ### Il mio approccio al Design: Strategia & Ricerca

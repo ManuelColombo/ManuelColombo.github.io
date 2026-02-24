@@ -1,10 +1,12 @@
 ---
 title: "Project List"
-layout: base.njk
+layout: blog_post.njk
 date: 2025-09-02
 tags: ["approach"]
 permalink: "/approach/portfolio/"
 ---
+
+::All of this time for such a small results?::
 # the Project I've done so far
 
 Qui devo mettere una lista con dei link o delle foto a tutte le cose che ho fatto nella mia carriera.

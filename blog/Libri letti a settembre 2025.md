@@ -9,14 +9,19 @@ thumbnail: https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840
 excerpt: "Quello che leggo spiega molto di quello che penso. Molto più di quello che scrivo" 
 ---
 
+
+::Quello che leggo spiega molto di quello che penso. Molto più di quello che scrivo::
 # Settembre 2025
 
-## La fornace di Thomas Bernhard
+## La fornace, di Thomas Bernhard
 
-Mi ha dato il senso di urgenza del fare le cose. Mettere per iscritto le mie idee è anche un modo per smettere di pensarle, di andare oltre. La prosa incessante, senza paragrafi, senza capitoli, senza stacchi tra un concetto e l'altro assomiglia alla vita. Un viaggio insensato che conduce li dove si è voluto andare. L'errore è scoperto solo a posteriori. 
+![inline|Copertina del libro "la fornace di Thomas Bernhard"](/assets/blog/la_fornace.png) Mi ha dato il senso di urgenza del fare le cose. Mettere per iscritto le mie idee è anche un modo per smettere di pensarle, di andare oltre. La prosa incessante, senza paragrafi, senza capitoli, senza stacchi tra un concetto e l'altro assomiglia alla vita. Un viaggio insensato che conduce li dove si è voluto andare. L'errore è scoperto solo a posteriori. Forse il libro che ha dato inizio a questo tenere traccia dei libri che leggo, delle note che prendo leggendoli, delle connessioni spaziali e temporali che fanno si che io passi da un libro all'altro. 
 
-## la patafisica è l'arte del vedere di Jean Baudrillard
 
+
+## La patafisica è l'arte del vedere, di Jean Baudrillard
+
+![inline-right|Libro La patafisica è l'arte del vedere, di Jean Baudrillard](/assets/blog/Baudrillard.jpg)
 Con questo libro capisco perché ai filosofi viene mossa l'accusa di dire molto senza far capire nulla. Il linguaggio è volutamente ostico, con costruzioni lessicali al limite della comprensione.
 Tuttavia il tema di fondo è interessante. 
 La scomparsa del l'illusione per un eccesso di realtà. L'immediatezza delle trasmissione in diretta, la natura soggettiva delle immagini, la personalizzazione della vista a distanza, tutto questo porta alla morte dell'illusione. Oggi vediamo tutto attraverso uno schermo che amplifica e filtra, attraverso la tecnica del microscopio o del reportage, non c'è più posto per il sogno, l'illusione è qui la consapevolezza che la realtà non è che una costruzione recente, il mondo costretto ad essere reale perde la sua parte illusoria. Ma sotto il velo della verità, squarciato il velo di maya, non c'è nulla, se non un altro velo all'infinito.

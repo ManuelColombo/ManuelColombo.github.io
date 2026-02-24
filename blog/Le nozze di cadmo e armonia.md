@@ -1,6 +1,6 @@
 ---
 layout: blog_post.njk
-date: 2025-12-16
+date: 2025-11-16
 tags: ["blog"]
 permalink: "/blog/le_nozze_di_cadmo_e_armonia/"
 title: "Com'è cominciato tutto questo?"

@@ -4,6 +4,39 @@ const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss")
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(lightningCSS);
+
+  // Custom markdown syntax: ::testo:: → <span class="occhiello">testo</span>
+  eleventyConfig.addTransform("occhiello", function(content) {
+    if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+      return content.replace(/::([^:]+)::/g, '<span class="occhiello">$1</span>');
+    }
+    return content;
+  });
+
+  // Image sizing: ![cover|alt](url) → <figure class="img-cover"><img alt="alt"></figure>
+  // Sizes: cover, wide, half  (standalone images, on their own line)
+  // inline: ![inline|alt](url) within text → adds class img-inline directly on <img>
+  eleventyConfig.addTransform("imgSize", function(content) {
+    if (!this.page.outputPath || !this.page.outputPath.endsWith(".html")) return content;
+    // Step 1: wrap size-tagged <img> in <figure> regardless of context
+    content = content.replace(
+      /<img src="([^"]*)" alt="(cover|wide|half)(?:\|([^"]*))?"([^>]*?)>/g,
+      (_, src, size, alt, rest) =>
+        `<figure class="img-${size}"><img src="${src}" alt="${alt || ''}"${rest}></figure>`
+    );
+    // Step 2: remove <p> wrappers that now contain only figures (and whitespace)
+    content = content.replace(
+      /<p>(\s*<figure\b[\s\S]*?<\/figure>\s*)+<\/p>/g,
+      match => match.replace(/^<p>|<\/p>$/g, '')
+    );
+    // Step 3: inline images → add class directly on <img>
+    content = content.replace(
+      /<img src="([^"]*)" alt="(inline|inline-right)(?:\|([^"]*))?"([^>]*?)>/g,
+      (_, src, size, alt, rest) =>
+        `<img src="${src}" alt="${alt || ''}" class="img-${size}"${rest}>`
+    );
+    return content;
+  });
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addNunjucksFilter('date', dateFilter);
 

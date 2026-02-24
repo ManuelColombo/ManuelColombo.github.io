@@ -1,6 +1,6 @@
 ---
 layout: blog_post.njk
-date: 2025-12-16
+date: 2025-10-16
 tags: ["blog", "zorro", "batman"]
 permalink: /blog/zorro_e_batman/
 title: Zorro è Batman?
