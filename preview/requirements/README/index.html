@@ -1,0 +1,33 @@
+<h1>Sito multilingue — panoramica</h1>
+<h2>Cosa voglio ottenere</h2>
+<p>Scrivo in italiano. Quando pubblico, il sito deve esistere anche in inglese.
+Non voglio gestire due versioni dei contenuti a mano.
+Voglio però poter leggere la traduzione inglese e correggerla prima che vada in produzione, se la prosa non mi convince.</p>
+<h2>Vincoli che non cambiano</h2>
+<ul>
+<li>I file sorgente restano in italiano, nella struttura attuale (<code>blog/</code>, <code>approach/</code>, ecc.)</li>
+<li>Il workflow di pubblicazione è già definito: <code>git staging</code> per la preview, <code>git publish</code> per la produzione</li>
+<li>Non voglio dipendenze fragili: se il servizio di traduzione è irraggiungibile, il sito non deve rompersi</li>
+</ul>
+<h2>Decisioni aperte (da risolvere nei documenti collegati)</h2>
+<ol>
+<li>
+<p><strong>Quando avviene la traduzione?</strong>
+Vedi → <a href="./flusso-traduzione.md">flusso-traduzione.md</a></p>
+</li>
+<li>
+<p><strong>Come sono strutturati i file tradotti?</strong>
+Vedi → <a href="./architettura-contenuti.md">architettura-contenuti.md</a></p>
+</li>
+<li>
+<p><strong>Come controllo la qualità della prosa inglese?</strong>
+Vedi → <a href="./controllo-qualita.md">controllo-qualita.md</a></p>
+</li>
+<li>
+<p><strong>Come si presenta la navigazione tra le lingue?</strong>
+Vedi → <a href="./navigazione-lingue.md">navigazione-lingue.md</a></p>
+</li>
+</ol>
+<h2>Principio guida</h2>
+<p>La traduzione automatica è un punto di partenza, non il risultato finale.
+Il sistema deve rendere facile intervenire sulla traduzione, non invisibile.</p>
