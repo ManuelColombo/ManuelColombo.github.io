@@ -37,6 +37,11 @@ module.exports = function(eleventyConfig) {
     );
     return content;
   });
+  // Files prefixed with "_" are only rendered in local dev (DEV=true)
+  if (!process.env.DEV) {
+    eleventyConfig.ignores.add("**/_*.md");
+  }
+
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addNunjucksFilter('date', dateFilter);
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "eleventy --serve",
+    "start": "DEV=true eleventy --serve",
     "build": "eleventy"
   },
   "repository": {
