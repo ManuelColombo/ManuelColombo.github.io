@@ -3,16 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ title or "Il mio sito" }}</title>
+    <title>{% if isStaging %}STG :: {% endif %}{{ title or "Il mio sito" }}</title>
     <meta name="description" content="{{ description or 'CV · Portfolio · Blog' }}">
-    <link rel="stylesheet" href="/assets/style.css" />
-    <link rel="icon" href="/assets/favicon.ico" />
-    <meta property="og:title" content="{{ title or 'Il mio sito' }}">
+    <link rel="stylesheet" href="{{ '/assets/style.css' | url }}" />
+    <link rel="icon" href="{{ '/assets/favicon.ico' | url }}" />
+    <meta property="og:title" content="{% if isStaging %}STG :: {% endif %}{{ title or 'Il mio sito' }}">
     <meta property="og:description" content="{{ description or 'CV · Portfolio · Blog' }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url }}">
+    {% if isStaging %}
+    <style>
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: #8b00ff;
+        z-index: 9999;
+      }
+    </style>
+    {% endif %}
   </head>
-  <body>
+  <body{% if isStaging %} class="staging"{% endif %}>
     {% include "breadcrumb.njk" %}
     <main>
       {{ content | safe }}
