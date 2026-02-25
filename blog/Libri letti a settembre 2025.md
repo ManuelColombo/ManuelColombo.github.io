@@ -29,7 +29,9 @@ La scomparsa del l'illusione per un eccesso di realtà. L'immediatezza delle tra
 Mi ha fatto venire voglia di rileggere il supermaschio di Jarry
 
 
-## Punacci, storia di una capra nera. Di Perumal Murugan
+## Punacci, storia di una capra nera, di Perumal Murugan
+
+![wide|Punacci, storia di una capra nera, di Perumal Murugan](/assets/blog/Punacci.jpg) 
 
 Libro inaspettato, trovato sugli scaffali di libero scambio, scelto per il titolo e per la copertina, una sorta di minimalism geometrico con l'occhio di una capra in primissimo piano. 
 Il romanzo viene dall'India, parla di gente poverissima, un tempo avremmo detto sottoproletariato agricolo, parla di magia e credenze religiose, parla dei rapporti tra le persone vicine e lontane, parla dell'amore dei giovani e dei vecchi. 
@@ -37,10 +39,10 @@ Tutto questo dal punto di vista di Punacci, la capra nera.
 Realismo magico indiano? Forse. Di sicuro uno scorcio su vite ai margini, raccontato con dolcezza. Non manca la disillusioned feroce dei deboli nei confronti del potere. 
 
 ## Pianoforte vendesi, di Andrea Vitali. 
+> Libro abbastanza perdibile. 
 
-Libro abbastanza perdi ile. 
-Un ladro borseggiatore, la notte della festa, piove e sono tutti a casa. Entra in una casa, dove restava solo un piano in vendita e inizia la storia di fantasmi, un po' rosa un po' poliziesco. Coi carabinieri inadeguati e i personaggi maschera, senza spessore. 
-Lo stile è piacevole e si arriva con gusto alla fine, ma è come un comodo pullman in orario per andare al lavoro. Un bel viaggio che lascia poco. 
+![inline|Pianoforte vendesi copertina](/assets/blog/Pianoforte-vendesi.jpg) Un ladro borseggiatore, la notte della festa, piove e sono tutti a casa. Entra in una casa, dove restava solo un piano in vendita e inizia la storia di fantasmi, un po' rosa un po' poliziesco. Coi carabinieri inadeguati e i personaggi maschera, senza spessore. 
+Lo stile è piacevole e si arriva con gusto alla fine, ma è come quando la corriera che porta al lavoro è in orario e si trova posto. Fa piacere, ma non è un viaggio che lascia traccia. 
 
 ## Perfide, di Giulia Volpi Mannipieri, in arte Mura
 

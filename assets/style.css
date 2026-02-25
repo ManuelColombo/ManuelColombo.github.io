@@ -296,3 +296,30 @@ footer{
   border-top: var(--ink) 1px solid;
   font-size: var(--base-font-small);
 }
+
+/* ── Dark mode ────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink:    hsl(30 8% 83%);
+    --bg:     hsl(220 12% 13%);
+    --behind: hsl(220 12% 13%);
+    --bounce: hsl(220 12% 8%);
+    --link:   #74b3f5;
+  }
+
+  h1,h2,h3,h4,h5,h6, strong, a:hover {
+    background-image: linear-gradient(hsl(300, 70%, 80%), hsl(300, 70%, 62%));
+  }
+
+  .occhiello {
+    color: hsl(300, 45%, 70%);
+  }
+
+  main img {
+    box-shadow: 0 4px 20px hsl(0 0% 0% / 0.4);
+  }
+
+  .wrapper .card {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px;
+  }
+}
