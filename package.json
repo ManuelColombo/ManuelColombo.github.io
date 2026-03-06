@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "DEV=true eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "translate": "node scripts/translate.js",
+    "translate:force": "node scripts/translate.js --force"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,8 @@
   },
   "dependencies": {
     "@11tyrocks/eleventy-plugin-lightningcss": "^1.5.0",
+    "@anthropic-ai/sdk": "^0.39.0",
+    "gray-matter": "^4.0.3",
     "nunjucks-date-filter": "^0.1.1"
   }
 }

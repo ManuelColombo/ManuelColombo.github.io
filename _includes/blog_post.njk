@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="{{ lang or 'it' }}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,6 +11,21 @@
     <meta property="og:description" content="{{ description or 'CV · Portfolio · Blog' }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url }}">
+
+    {# ── hreflang ──────────────────────────────────────────────── #}
+    {% set is_en = lang == "en" %}
+    {% if is_en %}
+      {% set it_url = page.url | replace("/en/", "/") %}
+      <link rel="alternate" hreflang="it" href="{{ siteUrl }}{{ it_url }}">
+      <link rel="alternate" hreflang="en" href="{{ siteUrl }}{{ page.url }}">
+    {% else %}
+      <link rel="alternate" hreflang="it" href="{{ siteUrl }}{{ page.url }}">
+      {% set en_url = "/en" + page.url %}
+      {% if collections.blogEn | findByUrl(en_url) %}
+      <link rel="alternate" hreflang="en" href="{{ siteUrl }}{{ en_url }}">
+      {% endif %}
+    {% endif %}
+
     {% if isStaging %}
     <style>
       body::before {
@@ -29,6 +44,17 @@
   <body{% if isStaging %} class="staging"{% endif %}>
     {% include "breadcrumb.njk" %}
     <main>
+      {# ── Translation notice ──────────────────────────────────── #}
+      {% if lang == "en" and not translation_reviewed %}
+      <div class="translation-notice">
+        Automatically translated from Italian.
+        {% if source %}
+          {% set it_url = "/" + (source | replace(".md", "/")) %}
+          <a href="{{ it_url | url }}">Read the original.</a>
+        {% endif %}
+      </div>
+      {% endif %}
+
       {{ content | safe }}
       <div style="clear: both"></div>
       <script src="https://utteranc.es/client.js"

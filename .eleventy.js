@@ -1,4 +1,5 @@
 // .eleventy.js
+const path = require('path');
 const dateFilter = require('nunjucks-date-filter');
 const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss")
 
@@ -41,6 +42,36 @@ module.exports = function(eleventyConfig) {
   if (!process.env.DEV) {
     eleventyConfig.ignores.add("**/_*.md");
   }
+
+  // ── i18n collections ──────────────────────────────────────────
+  // Italian blog posts (excludes .en.md and _-prefixed drafts)
+  eleventyConfig.addCollection("blog", col =>
+    col.getFilteredByGlob("./blog/*.md")
+      .filter(item =>
+        !path.basename(item.inputPath).includes('.en.') &&
+        !path.basename(item.inputPath).startsWith('_')
+      )
+      .reverse()
+  );
+
+  // English blog posts
+  eleventyConfig.addCollection("blogEn", col =>
+    col.getFilteredByGlob("./blog/*.en.md").reverse()
+  );
+
+  // ── i18n filters ──────────────────────────────────────────────
+  // Find an item in a collection by URL
+  eleventyConfig.addFilter("findByUrl", (collection, url) =>
+    (collection || []).find(item => item.url === url) || null
+  );
+
+  // String.startsWith helper for templates
+  eleventyConfig.addFilter("startsWith", (str, prefix) =>
+    String(str || '').startsWith(prefix)
+  );
+
+  // ── Global data ───────────────────────────────────────────────
+  eleventyConfig.addGlobalData("siteUrl", "https://manuelcolombo.github.io");
 
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addNunjucksFilter('date', dateFilter);

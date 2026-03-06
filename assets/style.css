@@ -301,6 +301,44 @@ footer{
   font-size: var(--base-font-small);
 }
 
+/* ── Language switcher ────────────────────────────────────── */
+.lang-switch {
+  font-family: var(--sans);
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border: 1.5px solid currentColor;
+  padding: 0.15em 0.45em;
+  border-radius: 3px;
+  text-decoration: none !important;
+  background: none !important;
+  background-clip: unset !important;
+  color: inherit !important;
+  opacity: 0.65;
+  transition: opacity 0.2s;
+  margin-left: 0.6em;
+  vertical-align: middle;
+}
+.lang-switch:hover {
+  opacity: 1;
+}
+.lang-na {
+  opacity: 0.25;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ── Translation notice ────────────────────────────────────── */
+.translation-notice {
+  background: color-mix(in srgb, var(--link) 12%, transparent);
+  border-left: 3px solid var(--link);
+  padding: 0.6rem 1rem;
+  margin-bottom: 2rem;
+  font-size: 0.88em;
+  font-family: var(--sans);
+  color: var(--ink);
+}
+
 /* ── Dark mode ────────────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
   :root {
