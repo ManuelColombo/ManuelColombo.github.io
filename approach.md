@@ -1,51 +1,84 @@
 ---
 title: "Portfolio"
-layout: blog_post.njk
+layout: base.njk
 permalink: "/approach/"
 ---
 
-# Portfolio
-## Strategic Design & Research Highlights
+# A designer design.
 
-As a design lead and UX researcher, I specialize in driving **user-centered innovation** across diverse industries and multicultural teams. My work blends strategic vision with hands-on research, guiding organizations to align business goals with real user needs.
+Il gioco di parole in inglese è molto bello e rende bene l'idea di cosa faccia un designer. 
 
-I lead research initiatives from discovery to activation, using methods like interviews, usability testing, and eye tracking to uncover actionable insights. My experience includes shaping editorial workflows for major news media, informing app design for financial services, and facilitating design-thinking workshops that spark creativity and collaboration.
+Se vuoi vedere i miei progetti vai [in fondo alla pagina](#fondo). Se vuoi capirli, continua a leggere.
 
-I believe in making research accessible—translating complex findings into clear, inspiring narratives that empower teams and drive product decisions. My leadership style centers on empathy, curiosity, and fostering a culture where every voice contributes to meaningful outcomes.
+Il mio approccio al mestiere è semplice e vago allo stesso modo di questa definizione.
+In italiano serve spendere qualche parola in più anche solo per chiarire il significato di quel verbo "to design" che sostantivato da luogo alla professione del Designer.
 
-While confidentiality limits what I can share publicly, I’m always open to discussing my approach or specific challenges I’ve helped solve. As permissions allow, I’ll add dedicated project pages to this portfolio.
+Inoltre, quando si parla di Design Leadership, di User research e di Business transformation, ci si sposta dalla tautologia vaga a qualcosa di ancora più sfumato ed evanescente. 
 
-*Feel free to reach out at **il.manuel.colombo @ gmail.com** if you’d like to know more or connect!*
+## Come tradurre "to Design"?
+
+Design, ormai non si traduce più. Abbiamo la settimana del Design milanese, abbiamo arredi di Design, abbiamo meme che ironizzano sul "DiDesign", io stesso prendevo in giro chi la usava, prima di diventare un Designer, ossia colui che *compie il design*.
+
+Le scelte che si possono fare per tradurre questa azione sono limitate: alcuni preferiscono *progettare* ad un più infantile *disegnare*. Forse perché come grafici abbiamo sempre avuto il senso di inferiorità di chi si occupava della decorazione mentre nelle altre stanze, i grandi, parlavano di business e di soldi, tracciando grafici con excel.
+
+Anche io ero della scuola del "progetto", se non che "disegno", in un senso più ampio ne è un sinonimo. Si pensi al *disegno divino*. 
+Oggi però ci troviamo in un mondo dove *design* non si può tradurre più con nessuno dei due concetti. Se una caffettiera o un divano possono essere può essere disegnata, se un servizio o un processo industriale possono essere progettati, cosa dovremmo dire di strategie di governance, di allineamento di obiettivi o di value storytelling?
+
+Propongo senza nessuna umiltà di italianizzare la parola inglese, come faremmo con un qualsiasi verbo da videogioco. Se to download diventa download_are, se to respawn diventa respawn_are, se to lag diventa lagg_are, Design deve necessariamente diventare **Design_are**. 
+Meglio ancora se letto all'italiana: diventa designare:  derivato dal latino Signum «segno», significa indicare, proporre, determinare, stabilire, denotare, significare.
+
+Il design oggi è questo. Non si tratta più solo di linee armoniose, o di creazione di una catena produttiva. Si tratta di dare un significato, di proporre una strada, di indicare delle possibili soluzioni e definire quella, di volta in volta, più adatta. 
+
+## Il mio approccio al Design: Strategia & Ricerca
+
+Come fare però a designare. Come indicare la via da seguire a clienti e colleghi che devono creare una soluzione tangibile?
+
+È necessario praticare della teoria e teorizzare la pratica. 
+È necessario sapere come si fanno le cose, saperle fare e saper spiegare quello che si è fatto. Un designer di sedie deve conosce il legno e la sega e i motivi che spingono le persone a sedersi, un designer di siti web deve conoscere i linguaggi di programmazione, i computer e i motivi che portano le persone a navigare online. **Un designer di esperienze cosa deve conoscere?**
+
+Ammesso che sia vero che uno UX designer debba "Definire le strategie digitali per allineare gli obiettivi di business con i bisogni reali degli utenti", cosa deve fare per compiere questo allineamento?
+
+Abbiamo un po' di ingredienti: la strategia da definire, adesso possiamo dire Designare; gli obiettivi del business: cioè fare più soldi; i bisogni degli utenti, che hanno qualcosa che li induce a spendere soldi per ottenere qualcosa a cui danno valore. 
+
+Guardiamo agli utenti, alle persone e concentriamoci sul valore. **Cos'è il valore?**
+Il valore è quell'intangibile che fa la differenza tra un'esperienza memorabile e una che è meglio dimenticare.
+
+## Dare la caccia al Valore
+
+Per dare la caccia a quel valore occorre allargare lo sguardo al di là del digital design e poi restringerlo sul singolo pixel.
+La vista deve abbracciare l'infinitamente grande e l'infinitamente piccolo: i contesti di mercato e la risoluzione dei device, lo spirito del tempo e il tempo di caricamento delle pagine. **Tutto è Esperienza, ogni esperienza è unica e vissuta individualmente**
+
+Capite che ottimizzare le esperienze è un compito infinito se messo in questo modo. Si utilizzano allora delle scorciatoie statistiche, tanto più pericolose quanto più prese per vere.
+
+Si utilizzano altri concetti che "stanno per" l'esperienza. 
+Si trovano delle metriche per misurarle e ci si affida ad esse. 
+
+Poi le si racconta in un linguaggio consulenziale, a bullet point, del tipo:
+
+- Guido team che fanno ricerca utente, utilizzando metodi come interviste, test di usabilità e tracciamento oculare per individuare *insight azionabili*. 
+- Ho esperienza: 
+	- nel rimodellare *workflow editoriali* per grandi testate,
+	- nel definire soluzioni per app nel settore finanziario
+	- nel facilitare workshop di *design thinking* che stimolano creatività e collaborazione. 
+- Rendo la ricerca accessibile: 
+	- traduco risultati complessi in *narrazioni chiare e persuasive* che responsabilizzano i team e *orientano le decisioni di prodotto*. 
+- Il mio stile di leadership si basa su empatia, curiosità e sulla promozione di una cultura in cui ogni voce contribuisce a risultati significativi.
+
+La verità è che l'esperienza sfugge, muta, è piena di contraddizioni, di non detti, di incognite. La statistica sulle percentuali di conversioni della CTA è scientifica, percentuale, posizionatile su un grafico. È possibile persino monitorarne l'andamento mese su mese. Poco importa che questa percentuale dipenda o meno dall'esperienza. 
+
+Io continuerò a Designare e a cercare di catturare il valore dell'esperienza. Se per farlo dovrò ottimizzare conversioni, diminuire il bounce rate, o ridurre il tempo di caricamento di una pagina, lo farò.
+
+Molti progetti che ho guidato e che guiderò sono soggetti a vincoli di riservatezza, non sempre posso mostrare materiali pubblici; rimango però disponibile a discutere il mio approccio o casi specifici su richiesta. Quando sarà possibile, aggiungerò pagine dedicate ai singoli progetti all'interno di questo portfolio.
+
+*Per saperne di più o metterti in contatto: scrivimi a il.manuel.colombo @ gmail.com.*
+
+<span id="fondo"></span>
+## Alcuni progetti selezionati
 
 {% if collections.approach %}
 <section class="wrapper">
 {% for item in collections.approach | reverse %}
   {% set item = item %}{% include "card.njk" %}
-{% endfor %} 
+{% endfor %}
 </section>
 {% endif%}
-
-
-## Italiano
-### Il mio approccio al Design: Strategia & Ricerca
-
-> Un designer progetta.   
-
-Questa frase basterebbe a spiegare il modo in cui mi approccio al mestiere. Forse però vale la pena di scavare più a fondo. Quando si parla di Design Leadership, di User research e di Business transformation, ci si sposta dal progettare pure e semplice, verso qualcosa di più sfumato. 
-
-La pratica e il mestiere del designer restano la base culturale e tecnica che mi permette di fare un passo avanti: definire le strategie digitali per allineare gli obiettivi di business con i bisogni reali degli utenti.
-
- Ci si concentra sul valore. Il valore è quello che cerchiamo per i nostri clienti, per i nostri utenti. Il valore è quell'intangibile che fa la differenza tra un'esperienza memorabile e una che è meglio dimenticare. 
-
- Per dare la caccia a quel valore occorre allargare lo sguardo al di là del digital design e poi restringerlo sul singolo pixel. 
- La vista deve abbracciare l'infinitamente grande e l'infinitamente piccolo: i contesti di mercato e la risoluzione dei device, lo spirito del tempo e il tempo di caricamento delle pagine. 
-
-  così come il dettaglio delle micro animazioni, il modo in cui le interfacce interagiscono coi device, 
-
-Guido iniziative di ricerca dalla scoperta all’attivazione, utilizzando metodi come interviste, test di usabilità e tracciamento oculare per individuare insight azionabili. Ho esperienza nel rimodellare workflow editoriali per grandi testate, nel definire soluzioni per app nel settore finanziario e nel facilitare workshop di design thinking che stimolano creatività e collaborazione.
-
-Rendo la ricerca accessibile: traduco risultati complessi in narrazioni chiare e persuasive che responsabilizzano i team e orientano le decisioni di prodotto. Il mio stile di leadership si basa su empatia, curiosità e sulla promozione di una cultura in cui ogni voce contribuisce a risultati significativi.
-
-Poiché molti progetti sono soggetti a vincoli di riservatezza, non sempre posso mostrare materiali pubblici; rimango però disponibile a discutere il mio approccio o casi specifici su richiesta. Quando sarà possibile, aggiungerò pagine dedicate ai singoli progetti all’interno di questo portfolio.
-
-*Per saperne di più o metterti in contatto: scrivimi a il.manuel.colombo @ gmail.com.*

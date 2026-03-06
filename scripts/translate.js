@@ -7,6 +7,15 @@ const fs     = require('fs');
 const path   = require('path');
 const crypto = require('crypto');
 
+// Load .env if present
+const envPath = path.join(__dirname, '..', '.env');
+if (fs.existsSync(envPath)) {
+  fs.readFileSync(envPath, 'utf-8').split('\n').forEach(line => {
+    const [key, ...rest] = line.split('=');
+    if (key && rest.length) process.env[key.trim()] = rest.join('=').trim();
+  });
+}
+
 const Anthropic = require('@anthropic-ai/sdk');
 const matter    = require('gray-matter');
 
@@ -18,9 +27,10 @@ const FORCE = process.argv.includes('--force');
 // dest: path relative to ROOT (created by script)
 // permalink: the /en/ URL for the generated page
 const STATIC_PAGES = [
-  { src: 'index.md',    dest: 'en/index.md',    permalink: '/en/' },
-  { src: 'cv.md',       dest: 'en/cv.md',        permalink: '/en/cv/' },
-  { src: 'approach.md', dest: 'en/approach.md',  permalink: '/en/approach/' },
+  { src: 'index.md',                   dest: 'en/index.md',                   permalink: '/en/' },
+  { src: 'cv.md',                      dest: 'en/cv.md',                      permalink: '/en/cv/' },
+  { src: 'approach.md',                dest: 'en/approach.md',                permalink: '/en/approach/' },
+  { src: 'approach/Project_list.md',   dest: 'en/approach/Project_list.md',   permalink: '/en/approach/portfolio/' },
 ];
 
 // ── System prompt (from requirements/controllo-qualita.md) ────────────────
