@@ -43,6 +43,11 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.ignores.add("**/_*.md");
   }
 
+  // Ignore markdown files without a layout in front matter
+  eleventyConfig.addPreprocessor("require-layout", "md", (data) => {
+    if (!data.layout) return false;
+  });
+
   // ── i18n collections ──────────────────────────────────────────
   // Italian blog posts (excludes .en.md and _-prefixed drafts)
   eleventyConfig.addCollection("blog", col =>
