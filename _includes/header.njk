@@ -1,11 +1,37 @@
 <header>
   <nav>
     <!-- Breadcrumb on the left -->
-    <a href="{{ '/' | url }}">MANUEL COLOMBO{% if isStaging %} <span style="color: #8b00ff; font-size: 0.7em;">[STAGING]</span>{% endif %}</a>
+    {% set langBase = "/en" if lang == "en" else "" %}
+    <a href="{{ (langBase ~ '/') | url }}">MANUEL COLOMBO{% if isStaging %} <span style="color: #8b00ff; font-size: 0.7em;">[STAGING]</span>{% endif %}</a>
     <div class="menu">
-      <a href="{{ '/cv/' | url }}">CV</a>
-      <a href="{{ '/approach/' | url }}">Portfolio</a>
-      <a href="{{ '/blog/' | url }}">Blog</a>
+      <a href="{{ (langBase ~ '/cv/') | url }}">CV</a>
+      <a href="{{ (langBase ~ '/approach/') | url }}">Portfolio</a>
+      <a href="{{ (langBase ~ '/blog/') | url }}">Blog</a>
+
+      {# ── Language switcher ─────────────────────────────────── #}
+      {% set is_en = lang == "en" %}
+      {% set is_it_blog_post = (not is_en) and (page.url | startsWith("/blog/")) and page.url != "/blog/" %}
+      {% set is_en_blog_post = is_en and (page.url | startsWith("/en/blog/")) and page.url != "/en/blog/" %}
+
+      {% if is_en %}
+        {# English page → link back to Italian #}
+        {% set it_url = page.url | replace("/en/", "/") %}
+        <a href="{{ it_url | url }}" class="lang-switch">IT</a>
+      {% else %}
+        {# Italian page → link to English #}
+        {% set en_url = "/en" + page.url %}
+        {% if is_it_blog_post %}
+          {# Blog post: only show if EN translation exists #}
+          {% if collections.blogEn | findByUrl(en_url) %}
+            <a href="{{ en_url | url }}" class="lang-switch">EN</a>
+          {% else %}
+            <span class="lang-switch lang-na" title="Translation not yet available">EN</span>
+          {% endif %}
+        {% else %}
+          {# Static page: EN version always exists #}
+          <a href="{{ en_url | url }}" class="lang-switch">EN</a>
+        {% endif %}
+      {% endif %}
     </div>
   </nav>
 </header>

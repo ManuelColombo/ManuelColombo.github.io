@@ -1,16 +1,14 @@
 
 <footer>
-  <div> 
-    <p>
-      If you feel the need to navigate across pages with a good old sitemap, here are some useful links:
-    </p>
+  <div>
+    {% set langBase = "/en" if lang == "en" else "" %}
     <ul>
-      <li><a href="{{ '/' | url }}">Welcome</a></li>
-      <li><a href="{{ '/cv/' | url }}">Curriculum Vitae</a></li>
-      <li><a href="{{ '/approach/' | url }}">Design Approach and Portfolio</a></li>
-      <li><a href="{{ '/blog/' | url }}">The blog of my Ideas</a></li>
+      <li><a href="{{ (langBase ~ '/') | url }}">Home</a></li>
+      <li><a href="{{ (langBase ~ '/cv/') | url }}">Curriculum Vitae</a></li>
+      <li><a href="{{ (langBase ~ '/approach/') | url }}">Portfolio</a></li>
+      <li><a href="{{ (langBase ~ '/blog/') | url }}">Blog</a></li>
     </ul>
-  </div> 
+  </div>
   <small>© {{ now | date("yyyy") }}</small>
 
   <small>write me at <strong> <a href="mailto:il.manuel.colombo@gmail.com">il.manuel.colombo@gmail.com</a></strong></small>
