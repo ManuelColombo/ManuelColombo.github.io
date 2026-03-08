@@ -31,6 +31,8 @@ const STATIC_PAGES = [
   { src: 'cv.md',                      dest: 'en/cv.md',                      permalink: '/en/cv/' },
   { src: 'approach.md',                dest: 'en/approach.md',                permalink: '/en/approach/' },
   { src: 'approach/Project_list.md',   dest: 'en/approach/Project_list.md',   permalink: '/en/approach/portfolio/' },
+  { src: 'approach/CRO.md',           dest: 'en/approach/CRO.md',            permalink: '/en/approach/CRO/' },
+  { src: 'approach/mi_life_chart.md', dest: 'en/approach/mi_life_chart.md',  permalink: '/en/approach/mi_life_chart/' },
 ];
 
 // ── System prompt (from requirements/controllo-qualita.md) ────────────────

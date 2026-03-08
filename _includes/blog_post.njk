@@ -42,7 +42,7 @@
     {% endif %}
   </head>
   <body{% if isStaging %} class="staging"{% endif %}>
-    {% include "breadcrumb.njk" %}
+    {% include "header.njk" %}
     <main>
       {# ── Translation notice ──────────────────────────────────── #}
       {% if lang == "en" and not translation_reviewed %}

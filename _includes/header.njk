@@ -1,11 +1,12 @@
 <header>
   <nav>
     <!-- Breadcrumb on the left -->
-    <a href="{{ '/' | url }}">MANUEL COLOMBO{% if isStaging %} <span style="color: #8b00ff; font-size: 0.7em;">[STAGING]</span>{% endif %}</a>
+    {% set langBase = "/en" if lang == "en" else "" %}
+    <a href="{{ (langBase ~ '/') | url }}">MANUEL COLOMBO{% if isStaging %} <span style="color: #8b00ff; font-size: 0.7em;">[STAGING]</span>{% endif %}</a>
     <div class="menu">
-      <a href="{{ '/cv/' | url }}">CV</a>
-      <a href="{{ '/approach/' | url }}">Portfolio</a>
-      <a href="{{ '/blog/' | url }}">Blog</a>
+      <a href="{{ (langBase ~ '/cv/') | url }}">CV</a>
+      <a href="{{ (langBase ~ '/approach/') | url }}">Portfolio</a>
+      <a href="{{ (langBase ~ '/blog/') | url }}">Blog</a>
 
       {# ── Language switcher ─────────────────────────────────── #}
       {% set is_en = lang == "en" %}

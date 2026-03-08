@@ -64,6 +64,20 @@ module.exports = function(eleventyConfig) {
     col.getFilteredByGlob("./blog/*.en.md").reverse()
   );
 
+  // Italian approach pages (excludes lang:en)
+  eleventyConfig.addCollection("approach", col =>
+    col.getFilteredByTag("approach")
+      .filter(item => item.data.lang !== "en")
+      .reverse()
+  );
+
+  // English approach pages
+  eleventyConfig.addCollection("approachEn", col =>
+    col.getFilteredByTag("approach")
+      .filter(item => item.data.lang === "en")
+      .reverse()
+  );
+
   // ── i18n filters ──────────────────────────────────────────────
   // Find an item in a collection by URL
   eleventyConfig.addFilter("findByUrl", (collection, url) =>
