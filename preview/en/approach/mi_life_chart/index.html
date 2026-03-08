@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>STG :: Skill Timeline</title>
+    <title>STG :: Skills Timeline</title>
     <meta name="description" content="CV · Portfolio · Blog">
     <link rel="stylesheet" href="/preview/assets/style.css" />
     <link rel="icon" href="/preview/assets/favicon.ico" />
-    <meta property="og:title" content="STG :: Skill Timeline">
+    <meta property="og:title" content="STG :: Skills Timeline">
     <meta property="og:description" content="CV · Portfolio · Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/approach/mi_life_chart/">
+    <meta property="og:url" content="/en/approach/mi_life_chart/">
 
     
     
     
+      
       <link rel="alternate" hreflang="it" href="https://manuelcolombo.github.io/approach/mi_life_chart/">
-      
-      
-      
       <link rel="alternate" hreflang="en" href="https://manuelcolombo.github.io/en/approach/mi_life_chart/">
-      
     
 
     
@@ -43,11 +40,11 @@
   <nav>
     <!-- Breadcrumb on the left -->
     
-    <a href="/preview/">MANUEL COLOMBO <span style="color: #8b00ff; font-size: 0.7em;">[STAGING]</span></a>
+    <a href="/preview/en/">MANUEL COLOMBO <span style="color: #8b00ff; font-size: 0.7em;">[STAGING]</span></a>
     <div class="menu">
-      <a href="/preview/cv/">CV</a>
-      <a href="/preview/approach/">Portfolio</a>
-      <a href="/preview/blog/">Blog</a>
+      <a href="/preview/en/cv/">CV</a>
+      <a href="/preview/en/approach/">Portfolio</a>
+      <a href="/preview/en/blog/">Blog</a>
 
       
       
@@ -57,10 +54,7 @@
       
         
         
-        
-          
-          <a href="/preview/en/approach/mi_life_chart/" class="lang-switch">EN</a>
-        
+        <a href="/preview/approach/mi_life_chart/" class="lang-switch">IT</a>
       
     </div>
   </nav>
@@ -68,7 +62,7 @@
 
     <main>
       <h1>Skills Timeline</h1>
-<p>Nobody borns a master, my path to what I'm now is paved of good intention, errors and learnings.</p>
+<p>Nobody is born a master. My path to what I am now is paved with good intentions, errors, and learnings.</p>
 <div id="stackedAreaChart"></div>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
@@ -325,59 +319,17 @@ milestones.forEach((milestone, index) => {
 });
 
 // Subtle grid lines with CV-inspired styling
-const yTicks = yScale.ticks(6);
-svg.selectAll(".grid-line")
-  .data(yTicks)
-  .enter()
-  .append("line")
-  .attr("class", "grid-line")
-  .attr("x1", 0)
-  .attr("x2", width)
-  .attr("y1", d => yScale(d))
-  .attr("y2", d => yScale(d))
-  .style("stroke", "#BDC3C7")
-  .style("stroke-width", 0.3)
-  .style("opacity", 0.5);
 
-// Add responsive styling
-const chartContainer = d3.select("#stackedAreaChart");
-chartContainer.style("width", "100%")
-  .style("max-width", "800px")
-  .style("margin", "0 auto");
-</script>
-<style>
-/* Additional CSS for better column integration */
-#stackedAreaChart {
-  font-family: Arial, sans-serif;
-  background: #FAFAFA;
-  border-radius: 4px;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-#stackedAreaChart svg {
-  display: block;
-  margin: 0 auto;
-}
-
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-  #stackedAreaChart svg {
-    width: 100% !important;
-    height: auto !important;
-  }
-}
-</style>
     </main>
    
 <footer>
   <div>
     
     <ul>
-      <li><a href="/preview/">Home</a></li>
-      <li><a href="/preview/cv/">Curriculum Vitae</a></li>
-      <li><a href="/preview/approach/">Portfolio</a></li>
-      <li><a href="/preview/blog/">Blog</a></li>
+      <li><a href="/preview/en/">Home</a></li>
+      <li><a href="/preview/en/cv/">Curriculum Vitae</a></li>
+      <li><a href="/preview/en/approach/">Portfolio</a></li>
+      <li><a href="/preview/en/blog/">Blog</a></li>
     </ul>
   </div>
   <small>© 2026</small>
