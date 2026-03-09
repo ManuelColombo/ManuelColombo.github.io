@@ -38,43 +38,63 @@ module.exports = function(eleventyConfig) {
     );
     return content;
   });
-  // Files prefixed with "_" are only rendered in local dev (DEV=true)
-  if (!process.env.DEV) {
-    eleventyConfig.ignores.add("**/_*.md");
-  }
+  const isDev = !!process.env.DEV;
+  const isStaging = process.env.PATH_PREFIX === "/preview";
 
-  // Ignore markdown files without a layout in front matter
-  eleventyConfig.addPreprocessor("require-layout", "md", (data) => {
+  // Draft file filtering based on filename prefix:
+  //   _filename.md  → visible only in local dev
+  //   __filename.md → visible in local dev and staging, hidden in production
+  // Also rejects markdown files without a layout (no orphan pages published).
+  eleventyConfig.addPreprocessor("draft-and-layout-filter", "md", (data) => {
+    const basename = path.basename(data.page.inputPath);
+    if (basename.startsWith('__')) {
+      if (!isDev && !isStaging) return false;
+    } else if (basename.startsWith('_')) {
+      if (!isDev) return false;
+    }
     if (!data.layout) return false;
   });
 
   // ── i18n collections ──────────────────────────────────────────
-  // Italian blog posts (excludes .en.md and _-prefixed drafts)
+  // Helper: draft visibility check for collection filters
+  const isDraftVisible = (basename) => {
+    if (basename.startsWith('__')) return isDev || isStaging;
+    if (basename.startsWith('_')) return isDev;
+    return true;
+  };
+
+  // Italian blog posts
   eleventyConfig.addCollection("blog", col =>
     col.getFilteredByGlob("./blog/*.md")
-      .filter(item =>
-        !path.basename(item.inputPath).includes('.en.') &&
-        !path.basename(item.inputPath).startsWith('_')
-      )
+      .filter(item => {
+        const basename = path.basename(item.inputPath);
+        return !basename.includes('.en.') && isDraftVisible(basename);
+      })
       .reverse()
   );
 
   // English blog posts
   eleventyConfig.addCollection("blogEn", col =>
-    col.getFilteredByGlob("./blog/*.en.md").reverse()
+    col.getFilteredByGlob("./blog/*.en.md")
+      .filter(item => isDraftVisible(path.basename(item.inputPath)))
+      .reverse()
   );
 
   // Italian approach pages (excludes lang:en)
   eleventyConfig.addCollection("approach", col =>
     col.getFilteredByTag("approach")
-      .filter(item => item.data.lang !== "en")
+      .filter(item =>
+        item.data.lang !== "en" && isDraftVisible(path.basename(item.inputPath))
+      )
       .reverse()
   );
 
   // English approach pages
   eleventyConfig.addCollection("approachEn", col =>
     col.getFilteredByTag("approach")
-      .filter(item => item.data.lang === "en")
+      .filter(item =>
+        item.data.lang === "en" && isDraftVisible(path.basename(item.inputPath))
+      )
       .reverse()
   );
 

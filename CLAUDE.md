@@ -103,6 +103,22 @@ date: 2025-09-01
 
 The blog index (`blog.md`) uses Eleventy collections to list all posts.
 
+### Draft & Visibility Rules
+
+Markdown files are filtered at build time by two rules:
+
+1. **No layout → not published.** Any `.md` file without a `layout` in its front matter is silently skipped everywhere (local, staging, production). Useful for notes or support files in the repo.
+
+2. **Filename prefix → environment visibility:**
+
+| Prefix | Local dev | Staging | Production |
+|--------|-----------|---------|------------|
+| *(none)* | ✓ | ✓ | ✓ |
+| `__` | ✓ | ✓ | ✗ |
+| `_` | ✓ | ✗ | ✗ |
+
+Examples: `__my-draft-post.md` is visible on staging for review but never goes to production. `_scratch.md` is a local-only scratchpad.
+
 ## Important Notes
 
 - **Never commit `_site/`** - it's in .gitignore and auto-generated
