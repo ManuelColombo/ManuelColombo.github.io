@@ -5,7 +5,7 @@
   --behind: color-mix(in srgb, var(--bg), black 0%);
   --bounce: color-mix(in srgb, var(--bg), black 10%);
   --oblivion: color-mix(in srgb, var(--behind), black 80%);
-  --link:#0b72d2;
+  --link:#80007f;
   --col: 960px;
   --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   --mono: 'Courier New', Courier, monospace;
@@ -72,6 +72,7 @@ header {
 
     a {
       text-decoration: none;
+      color: inherit;
       &:hover {
         text-decoration: dashed 1px;
       }
@@ -247,11 +248,38 @@ main img {
   border-radius: 4px;
   margin-block: 1rem;
 }
+/* ── Shadow on inline images in post content ─────────────── */
+main p img {
+  float:left;
+  margin-right: 1rem;
+}
 
 /* ── Image sizing system: figure[data-layout] ────────────── */
 figure {
   margin: 1.5rem 0;
 }
+
+/* masthead: full-bleed hero, altezza fissa per lasciare il titolo visibile
+   al primo scroll sia desktop che mobile */
+figure[data-layout="masthead"] {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-top: -1rem; /* compensa il padding di main */
+  margin-bottom: 2rem;
+  height: 55vh;
+  overflow: hidden;
+}
+figure[data-layout="masthead"] img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  margin-block: 0;
+}
+
 figure[data-layout="cover"] {
   width: 100vw;
   position: relative;
@@ -323,6 +351,21 @@ h6 { font-size: var(--h6-size); line-height: 1.5; font-weight: 500; }
 
 strong { font-weight: 600; }
 
+/* ── Occhiello / kicker label: ::testo:: → <b> ──────────── */
+b {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303;
+  margin: 0;
+}
+p:has(b) {
+  margin: 0;
+}
+
 footer {
   border-top: var(--ink) 1px solid;
   font-size: var(--base-font-small);
@@ -340,6 +383,10 @@ footer {
 
   h1,h2,h3,h4,h5,h6, strong, a:hover {
     background-image: linear-gradient(hsl(300, 70%, 80%), hsl(300, 70%, 62%));
+  }
+
+  b {
+    color: hsl(300, 45%, 70%);
   }
 
   main img {
