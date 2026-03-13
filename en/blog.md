@@ -6,9 +6,10 @@ lang: en
 ---
 # Blog
 
-{% if collections.blogEn %}
+{% set blogItems = collections.blogEn if lang == "en" else collections.blog %}
+{% if blogItems %}
 <section class="wrapper">
-{% for item in collections.blogEn | reverse %}
+{% for item in blogItems | reverse %}
   {% set item = item %}{% include "card.njk" %}
 {% endfor %}
 </section>

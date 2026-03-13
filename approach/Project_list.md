@@ -3,6 +3,7 @@ title: "Lista Progetti"
 layout: base.njk
 date: 2025-09-02
 tags: ["approach"]
+thumbnail: ../assets/approach/SkillChart.png
 permalink: "/approach/portfolio/"
 ---
 

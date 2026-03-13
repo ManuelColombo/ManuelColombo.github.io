@@ -73,6 +73,7 @@ Molti progetti che ho guidato e che guiderò sono soggetti a vincoli di riservat
 *Per saperne di più o metterti in contatto: scrivimi a il.manuel.colombo @ gmail.com.*
 
 <span id="fondo"></span>
+
 ## Alcuni progetti selezionati
 
 {% set approachItems = collections.approachEn if lang == "en" else collections.approach %}
