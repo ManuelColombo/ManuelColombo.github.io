@@ -78,7 +78,7 @@ Molti progetti che ho guidato e che guiderò sono soggetti a vincoli di riservat
 
 {% set approachItems = collections.approachEn if lang == "en" else collections.approach %}
 {% if approachItems %}
-<section class="wrapper">
+<section>
 {% for item in approachItems | reverse %}
   {% set item = item %}{% include "card.njk" %}
 {% endfor %}

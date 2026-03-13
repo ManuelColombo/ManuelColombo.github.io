@@ -1,7 +1,9 @@
 <!-- _includes/card.njk -->
-<a class="card" href="{{ item.url }}">
-  <figure class="card-figure">
-    <img src="{{ item.data.thumbnail }}" alt="{{ item.data.title }}">
-  </figure>
-  <p><strong>{{ item.data.title }}</strong>{% if item.data.excerpt %} {{ item.data.excerpt | safe }}{% endif %}</p>
-</a>
+<article>
+  <a href="{{ item.url }}">
+    <figure>
+      <img src="{{ item.data.thumbnail }}" alt="{{ item.data.title }}">
+    </figure>
+    <p><strong>{{ item.data.title }}</strong>{% if item.data.excerpt %} {{ item.data.excerpt | safe }}{% endif %}</p>
+  </a>
+</article>

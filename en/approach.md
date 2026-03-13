@@ -81,7 +81,7 @@ Many projects that I have led and will lead are subject to confidentiality restr
 
 {% set approachItems = collections.approachEn if lang == "en" else collections.approach %}
 {% if approachItems %}
-<section class="wrapper">
+<section>
 {% for item in approachItems | reverse %}
   {% set item = item %}{% include "card.njk" %}
 {% endfor %}
