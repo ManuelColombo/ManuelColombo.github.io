@@ -41,13 +41,15 @@
   <body class="staging">
     <header>
   <nav>
-    <!-- Breadcrumb on the left -->
+    <!-- Logo / home link on the left -->
     
     <a href="/preview/">MANUEL COLOMBO <span style="color: #8b00ff; font-size: 0.7em;">[STAGING]</span></a>
-    <div class="menu">
-      <a href="/preview/cv/">CV</a>
-      <a href="/preview/approach/">Portfolio</a>
-      <a href="/preview/blog/">Blog</a>
+
+    <!-- Right-side menu: ul replaces div.menu -->
+    <ul>
+      <li><a href="/preview/cv/">CV</a></li>
+      <li><a href="/preview/approach/">Portfolio</a></li>
+      <li><a href="/preview/blog/">Blog</a></li>
 
       
       
@@ -59,10 +61,10 @@
         
         
           
-          <a href="/preview/en/approach/" class="lang-switch">EN</a>
+          <li><a href="/preview/en/approach/" lang="en">EN</a></li>
         
       
-    </div>
+    </ul>
   </nav>
 </header>
 
@@ -118,28 +120,34 @@ Si trovano delle metriche per misurarle e ci si affida ad esse.</p>
 <p><em>Per saperne di più o metterti in contatto: scrivimi a il.manuel.colombo @ gmail.com.</em></p>
 <p><span id="fondo"></span></p>
 <h2>Alcuni progetti selezionati</h2>
-<section class="wrapper">
+<section>
   <!-- _includes/card.njk -->
-<a class="card" href="/preview/approach/portfolio/">
-  <figure class="card-figure">
-    <img src="../assets/approach/SkillChart.png" alt="Lista Progetti">
-  </figure>
-  <p><strong>Lista Progetti</strong></p>
-</a>
+<article>
+  <a href="/preview/approach/portfolio/">
+    <figure>
+      <img src="../assets/approach/SkillChart.png" alt="Lista Progetti">
+    </figure>
+    <p><strong>Lista Progetti</strong></p>
+  </a>
+</article>
   <!-- _includes/card.njk -->
-<a class="card" href="/preview/approach/mi_life_chart/">
-  <figure class="card-figure">
-    <img src="../assets/approach/SkillChart.png" alt="Skill Timeline">
-  </figure>
-  <p><strong>Skill Timeline</strong> Nobody borns a master, my path to what I'm now is paved of good intention, errors and learnings.</p>
-</a>
+<article>
+  <a href="/preview/approach/mi_life_chart/">
+    <figure>
+      <img src="../assets/approach/SkillChart.png" alt="Skill Timeline">
+    </figure>
+    <p><strong>Skill Timeline</strong> Nobody borns a master, my path to what I'm now is paved of good intention, errors and learnings.</p>
+  </a>
+</article>
   <!-- _includes/card.njk -->
-<a class="card" href="/preview/approach/CRO/">
-  <figure class="card-figure">
-    <img src="../assets/approach/SkillChart.png" alt="CRO and user research">
-  </figure>
-  <p><strong>CRO and user research</strong> Nobody borns a master, my path to what I'm now is paved of good intention, errors and learnings.</p>
-</a>
+<article>
+  <a href="/preview/approach/CRO/">
+    <figure>
+      <img src="../assets/approach/SkillChart.png" alt="CRO and user research">
+    </figure>
+    <p><strong>CRO and user research</strong> Nobody borns a master, my path to what I'm now is paved of good intention, errors and learnings.</p>
+  </a>
+</article>
 </section>
 
     </main>
