@@ -5,7 +5,9 @@ layout: base.njk
 # Al confine tra La curiosità e l'ignoto
 
 > Abitiamo sull’isola di ciò che è noto. Le sue sponde sono le coste della curiosità e guardano verso il vasto mare dell’ignoto.  
-> Più si allarga l'isola della conoscenza, più si allungano i suoi bordi, e con esse la curiosità.<sup>*</sup>
+> Più si allarga l'isola della conoscenza, più si allungano i suoi bordi, e con esse la curiosità.
+>
+> -- tratto da Alberto Cairo, How to Charts Lie
 
 Benvenuto nel mio sito, se avrai voglia di conoscermi qui troverai qualcosa con cui sodisfare il tuo appetito. 
 
@@ -21,5 +23,3 @@ Quando si tratta di fare sul serio, oppure quando il problema sembra banale, tro
 
 Qui puoi trovare qualcosa [su di me](/cv/), 
 esplorare il mio [approccio al design](/approach/) e alla ricerca, e leggere alcune delle [mie idee](/blog/)
-
-<sup>*</sup>*tratto da Alberto Cairo, How to Charts Lie*

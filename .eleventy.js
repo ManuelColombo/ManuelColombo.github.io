@@ -1,10 +1,28 @@
 // .eleventy.js
 const path = require('path');
+const fs = require('fs');
 const dateFilter = require('nunjucks-date-filter');
-const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss")
+const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss");
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(lightningCSS);
+
+  // Blockquote attribution: > -- Author → <cite>— Author</cite>
+  // Usage: separate paragraph inside blockquote starting with -- or —
+  eleventyConfig.addTransform("blockquoteAttribution", function(content) {
+    if (!this.page.outputPath || !this.page.outputPath.endsWith(".html")) return content;
+    return content.replace(
+      /<blockquote>([\s\S]*?)<\/blockquote>/g,
+      (_, inner) => {
+        const transformed = inner.replace(
+          /<p>(?:--|–|—)\s*(.+?)<\/p>/g,
+          '<cite>$1</cite>'
+        );
+        return `<blockquote>${transformed}</blockquote>`;
+      }
+    );
+  });
 
   // Custom markdown syntax: ::testo:: → <b>testo</b>  (kicker/occhiello label)
   // Uses <b> (bring-attention-to) since **bold** in markdown renders as <strong>, not <b>
@@ -24,7 +42,7 @@ module.exports = function(eleventyConfig) {
     content = content.replace(
       /<img src="([^"]*)" alt="(masthead|cover|wide|half)(?:\|([^"]*))?"([^>]*?)>/g,
       (_, src, size, alt, rest) =>
-        `<figure data-layout="${size}"><img src="${src}" alt="${alt || ''}"${rest}></figure>`
+        `<figure data-layout="${size}"><img src="${src}" alt="${alt || ''}" data-layout="${size}"${rest}></figure>`
     );
     // Step 2: remove <p> wrappers that now contain only figures (and whitespace)
     content = content.replace(
@@ -39,6 +57,76 @@ module.exports = function(eleventyConfig) {
     );
     return content;
   });
+  // Image optimization: converts local <img> to <picture> with WebP + srcset.
+  // Widths and sizes are tuned per data-layout. Results cached on disk in .cache/.
+  // Art direction for mobile: use object-position via CSS var --focal on the figure.
+  //   <figure data-layout="masthead" style="--focal: 40% 60%">
+  eleventyConfig.addTransform("imgOptimize", async function(content) {
+    if (!this.page.outputPath || !this.page.outputPath.endsWith(".html")) return content;
+
+    const imgRegex = /<img([^>]*)src="(\/assets\/[^"]*?)"([^>]*?)>/g;
+    const matches = [...content.matchAll(imgRegex)];
+    if (!matches.length) return content;
+
+    // Per-layout config
+    const layoutConfig = {
+      masthead:       { widths: [600, 1200, 1440, 1920], sizes: "100vw" },
+      cover:          { widths: [600, 1200, 1440, 1920], sizes: "100vw" },
+      wide:           { widths: [400, 800, 1100, 1440],  sizes: "(max-width: 720px) 100vw, calc(100% + 6rem)" },
+      half:           { widths: [200, 400, 500, 960],    sizes: "(max-width: 480px) 100vw, 50vw" },
+      inline:         { widths: [150, 300, 600],          sizes: "(max-width: 480px) 30vw, 200px" },
+      "inline-right": { widths: [150, 300, 600],          sizes: "(max-width: 480px) 30vw, 200px" },
+    };
+    const defaultConfig = { widths: [400, 800, 960, 1440], sizes: "(max-width: 960px) 100vw, 960px" };
+
+    const replacements = await Promise.all(matches.map(async ([fullMatch, before, src, after]) => {
+      const localPath = "." + src;
+      if (!fs.existsSync(localPath)) return [fullMatch, fullMatch];
+
+      const allAttrs = before + after;
+      const layoutMatch = allAttrs.match(/data-layout="([^"]*)"/);
+      const layout = layoutMatch ? layoutMatch[1] : "";
+      const { widths, sizes } = layoutConfig[layout] || defaultConfig;
+
+      try {
+        const metadata = await Image(localPath, {
+          widths,
+          formats: ["webp", "jpeg"],
+          outputDir: "./_site/assets/img/",
+          urlPath: "/assets/img/",
+          cacheOptions: { duration: "1d", directory: ".cache" },
+          filenameFormat: (id, src, width, format) =>
+            `${path.basename(src, path.extname(src))}-${width}w.${format}`
+        });
+
+        const alt = (allAttrs.match(/alt="([^"]*)"/) || [])[1] || "";
+        const dataLayout = layout ? ` data-layout="${layout}"` : "";
+        const loading = layout === "masthead" ? "" : ' loading="lazy"';
+        const fallback = metadata.jpeg.find(e => e.width >= 800) ?? metadata.jpeg.at(-1);
+        const webpSrcset = metadata.webp.map(e => `${e.url} ${e.width}w`).join(", ");
+        const jpegSrcset = metadata.jpeg.map(e => `${e.url} ${e.width}w`).join(", ");
+
+        const picture = [
+          `<picture>`,
+          `<source type="image/webp" srcset="${webpSrcset}" sizes="${sizes}">`,
+          `<source type="image/jpeg" srcset="${jpegSrcset}" sizes="${sizes}">`,
+          `<img src="${fallback.url}" alt="${alt}"${dataLayout}${loading} decoding="async">`,
+          `</picture>`
+        ].join("");
+
+        return [fullMatch, picture];
+      } catch(e) {
+        console.warn(`[imgOptimize] skipped ${src}: ${e.message}`);
+        return [fullMatch, fullMatch];
+      }
+    }));
+
+    for (const [original, replacement] of replacements) {
+      content = content.replace(original, replacement);
+    }
+    return content;
+  });
+
   const isDev = !!process.env.DEV;
   const isStaging = process.env.PATH_PREFIX === "/preview";
 

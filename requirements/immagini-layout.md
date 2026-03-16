@@ -46,6 +46,49 @@ Va messa come **primissima riga del contenuto**, prima del kicker e del titolo.
 # Titolo dell'articolo
 ```
 
+#### Focal point — controllare il crop su mobile
+
+Con `object-fit: cover` e altezza fissa, l'immagine viene ritagliata automaticamente.
+Il punto di fuoco predefinito è il centro (`center center`).
+Se il soggetto principale è fuori centro, si può spostare il focal point con la CSS custom property
+`--focal` direttamente sull'attributo `style` della `<figure>`.
+
+La sintassi richiede HTML grezzo nel `.md` (non funziona con `![masthead|...]`):
+
+```html
+<figure data-layout="masthead" style="--focal: 30% 60%">
+  <img src="/percorso/immagine.jpg" alt="Descrizione">
+</figure>
+```
+
+I valori di `--focal` sono coordinate `x% y%` come in `object-position`:
+
+| Valore | Effetto |
+|--------|---------|
+| `center center` | default — mostra il centro |
+| `left center` | ancora l'immagine a sinistra |
+| `right center` | ancora l'immagine a destra |
+| `50% 20%` | ancora verso l'alto (utile per paesaggi con soggetto in alto) |
+| `30% 70%` | ancora in basso a sinistra |
+
+Questo approccio risolve la maggior parte dei casi senza dover preparare due immagini separate.
+
+#### Art direction vera (due crop reali)
+
+Per mobile e desktop con composizioni completamente diverse (es. ritratto su mobile,
+panoramica su desktop) si possono usare due immagini sorgente con HTML diretto:
+
+```html
+<figure data-layout="masthead">
+  <picture>
+    <source media="(max-width: 480px)" srcset="/percorso/immagine-mobile.jpg">
+    <img src="/percorso/immagine-desktop.jpg" alt="Descrizione">
+  </picture>
+</figure>
+```
+
+Richiede di preparare manualmente le due versioni croppate.
+
 ---
 
 ### Nessun attributo — immagine standard
@@ -116,6 +159,35 @@ Come `inline` ma flotta a destra. Il testo scorre a sinistra.
 ```md
 ![inline-right|Descrizione](percorso/immagine.jpg) Qui continua il testo del paragrafo...
 ```
+
+---
+
+## Ottimizzazione automatica (WebP + srcset)
+
+Il transform `imgOptimize` in `.eleventy.js` processa automaticamente ogni `<img src="/assets/...">`:
+
+- Converte in **WebP** (con fallback JPEG per browser vecchi)
+- Genera **srcset** con più larghezze, calibrate per layout
+- Aggiunge `loading="lazy"` su tutto tranne il masthead
+- Aggiunge `decoding="async"` su tutti
+- Wrappa in `<picture>` trasparente al layout (`display: contents`)
+- Risultati **cachati su disco** in `.cache/` — la seconda build è veloce
+
+Le larghezze generate per layout:
+
+| Layout | Widths (px) | Sizes hint |
+|--------|-------------|------------|
+| `masthead`, `cover` | 600, 1200, 1440, 1920 | `100vw` |
+| `wide` | 400, 800, 1100, 1440 | `calc(100% + 6rem)` |
+| `half` | 200, 400, 500, 960 | `50vw` |
+| `inline`, `inline-right` | 150, 300, 600 | `200px` (30vw su mobile) |
+| standard | 400, 800, 960, 1440 | `960px` |
+
+I widths includono sempre versioni 2x per schermi retina. Il browser sceglie automaticamente la dimensione più adatta in base a DPR e larghezza del viewport.
+
+**Il JPEG nei `<source>` è un fallback necessario** — i browser moderni (Chrome, Firefox, Safari 14+, Edge) caricano sempre il WebP. Per verificare quale formato viene effettivamente caricato: DevTools → Network → filtra "Img" → colonna "Type".
+
+I file ottimizzati vengono scritti in `_site/assets/img/` (non in `assets/`).
 
 ---
 
