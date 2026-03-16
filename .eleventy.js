@@ -224,11 +224,17 @@ module.exports = function(eleventyConfig) {
 
         // Fix src="/..." for images and scripts
         content = content.replace(/src="(\/[^"]*?)"/g, (match, path) => {
-          // Skip external resources and already prefixed paths
-          if (path.startsWith('http') || path.startsWith(pathPrefix)) {
-            return match;
-          }
+          if (path.startsWith('http') || path.startsWith(pathPrefix)) return match;
           return `src="${pathPrefix}${path}"`;
+        });
+
+        // Fix srcset="/..." for <source> and <img srcset> (picture elements)
+        content = content.replace(/srcset="([^"]*)"/g, (match, srcset) => {
+          const fixed = srcset.replace(/((?:^|,)\s*)(\/[^\s,]+)/g, (m, sep, path) => {
+            if (path.startsWith('http') || path.startsWith(pathPrefix)) return m;
+            return `${sep}${pathPrefix}${path}`;
+          });
+          return `srcset="${fixed}"`;
         });
       }
       return content;
