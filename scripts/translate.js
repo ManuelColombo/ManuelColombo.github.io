@@ -30,8 +30,8 @@ const STATIC_PAGES = [
   { src: 'index.md',                   dest: 'en/index.md',                   permalink: '/en/' },
   { src: 'cv.md',                      dest: 'en/cv.md',                      permalink: '/en/cv/' },
   { src: 'approach.md',                dest: 'en/approach.md',                permalink: '/en/approach/' },
-  { src: 'approach/Project_list.md',   dest: 'en/approach/Project_list.md',   permalink: '/en/approach/portfolio/' },
-  { src: 'approach/CRO.md',           dest: 'en/approach/CRO.md',            permalink: '/en/approach/CRO/' },
+  { src: 'approach/_Project_list.md',   dest: 'en/approach/Project_list.md',   permalink: '/en/approach/portfolio/' },
+  { src: 'approach/_CRO.md',           dest: 'en/approach/CRO.md',            permalink: '/en/approach/CRO/' },
   { src: 'approach/mi_life_chart.md', dest: 'en/approach/mi_life_chart.md',  permalink: '/en/approach/mi_life_chart/' },
 ];
 
