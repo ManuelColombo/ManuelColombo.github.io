@@ -4,7 +4,7 @@ layout: base.njk
 date: 2025-12-08T00:00:00.000Z
 tags:
   - approach
-thumbnail: ../assets/approach/SkillChart.png
+thumbnail: /assets/approach/SkillChart.png
 excerpt: >-
   Nobody borns a master, my path to what I'm now is paved of good intention,
   errors and learnings.

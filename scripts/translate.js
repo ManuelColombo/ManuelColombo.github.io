@@ -163,6 +163,12 @@ async function processFile(client, srcPath, destPath, enPermalink) {
   newFm.source_hash          = currentHash;
   newFm.translation_reviewed = false;
 
+  // Normalize thumbnail: resolve relative paths to absolute (from site root)
+  if (newFm.thumbnail && !newFm.thumbnail.startsWith('/') && !newFm.thumbnail.startsWith('http')) {
+    const srcDir = path.dirname(path.join(ROOT, srcPath));
+    newFm.thumbnail = '/' + path.relative(ROOT, path.resolve(srcDir, newFm.thumbnail));
+  }
+
   const newContent = matter.stringify('\n' + translated.body, newFm);
 
   fs.mkdirSync(path.dirname(destFull), { recursive: true });

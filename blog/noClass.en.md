@@ -7,7 +7,7 @@ tags:
   - no class
 permalink: /en/blog/noclass/
 title: 'no-class, minimalism and html'
-thumbnail: assets/blog/noClass.png
+thumbnail: /assets/blog/noClass.png
 excerpt: 'No class, baby, no class'
 lang: en
 source: blog/noClass.md
