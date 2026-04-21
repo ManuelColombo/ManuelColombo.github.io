@@ -1,0 +1,61 @@
+name: Sync page removals to master
+
+on:
+  push:
+    branches: [Local_writing]
+
+permissions:
+  contents: write
+
+jobs:
+  sync-removals:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Remove from master any pages hidden or deleted on Local_writing
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+
+          # MD files visible in production = no _ prefix (neither _ nor __)
+          lw_files=$(git ls-tree -r --name-only origin/Local_writing \
+            | grep '\.md$' | grep -v 'node_modules' \
+            | awk -F/ '{ if ($NF !~ /^_/) print }')
+
+          master_files=$(git ls-tree -r --name-only origin/master \
+            | grep '\.md$' | grep -v 'node_modules' \
+            | awk -F/ '{ if ($NF !~ /^_/) print }')
+
+          # Files to delete: on master without _ but missing from Local_writing
+          to_delete=$(comm -23 \
+            <(echo "$master_files" | sort) \
+            <(echo "$lw_files" | sort))
+
+          if [ -z "$to_delete" ]; then
+            echo "Nothing to remove from master."
+            exit 0
+          fi
+
+          echo "Removing from master:"
+          echo "$to_delete"
+
+          git checkout master
+          git pull origin master
+
+          echo "$to_delete" | while read FILE; do
+            git rm --ignore-unmatch "$FILE"
+          done
+
+          if git diff --staged --quiet; then
+            echo "No staged changes."
+          else
+            git commit -m "chore: remove pages hidden on Local_writing"
+            git push origin master
+          fi
