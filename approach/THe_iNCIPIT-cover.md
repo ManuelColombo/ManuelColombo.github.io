@@ -1,17 +1,14 @@
 ---
 layout: photo_post.njk
-title: Cover for THe_iNCIPIT
-date: 2026-04-01T00:00:00.000Z
-tags:
-  - blog
-thumbnail: /assets/blog/incipit-cover/Incipit_covers_Art_Deco_Cover_2026-02-26_23-55.webp
-excerpt: An image is worth less than 5000 characters
-lang: en
-permalink: /en/blog/THe_iNCIPIT-cover/
-source: blog/THe_iNCIPIT-cover.md
-source_hash: 007a2340763b1abb
-translation_reviewed: false
+title: "Cover per THe_iNCIPIT"
+date: 2026-04-01
+tags: ["approach"]
+thumbnail: '/assets/blog/incipit-cover/Incipit_covers_Art_Deco_Cover_2026-02-26_23-55.webp'
+excerpt: 'Una immagine val meno di 5000 caratteri'
 ---
+
+
+# Cover per THe_iNCIPIT
 
 ![mosaic|alt text](/assets/blog/incipit-cover/0fc39df9-0f59-4c18-9096-f39b539c9cc1-01.png) 
 ![alt text](/assets/blog/incipit-cover/2a1c0ae8-16c1-4b39-bde8-4451f6e95cf9-01.png) 
@@ -62,3 +59,4 @@ translation_reviewed: false
 ![alt text](/assets/blog/incipit-cover/manuelcolombo_La_Bose_confronts_a_spectral_panda_in_a_cluttered_1e960d26-1174-4ae8-b57e-aad5e8db42f3.png) 
 
 ![alt text](/assets/blog/incipit-cover/manuelcolombo_The_Revelation_of_Hidden_Treasure_in_the_style_of_d904bea5-3404-49f1-82c2-8978b0dd270e.png)
+

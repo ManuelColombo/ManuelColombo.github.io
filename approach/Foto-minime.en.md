@@ -3,7 +3,7 @@ layout: photo_post.njk
 title: Minimal and Marginal Photos
 date: 2026-04-01T00:00:00.000Z
 tags:
-  - blog
+  - approach
 thumbnail: /assets/blog/fotoMinime/aria-sulla-5a-corda.jpg
 excerpt: Beauty shines at the edges
 lang: en

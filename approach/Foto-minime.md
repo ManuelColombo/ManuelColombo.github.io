@@ -2,7 +2,7 @@
 layout: photo_post.njk
 title: "Foto minime e marginali"
 date: 2026-04-01
-tags: ["blog"]
+tags: ["approach", "foto"]
 thumbnail: '/assets/blog/fotoMinime/aria-sulla-5a-corda.jpg'
 excerpt: 'La bellezza risplende ai bordi'
 ---
