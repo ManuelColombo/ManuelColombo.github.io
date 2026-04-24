@@ -127,6 +127,64 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  // Gallery grouping: consecutive images in a <p> → <div class="gallery">
+  // Runs after imgOptimize so it sees <picture> elements.
+  // Alt text syntax:
+  //   ![N|caption](url)       → numeric weight (fr unit), e.g. 2|, 1|
+  //   ![layout|caption](url)  → named layout on first image: pair, feature, triptych, mosaic, full
+  //   ![caption](url)         → default weight 1
+  // Named layouts: full=1col, pair=50/50, feature=60/40, triptych=3equal, mosaic=big-left+2-right
+  eleventyConfig.addTransform("galleryGroup", function(content) {
+    if (!this.page.outputPath || !this.page.outputPath.endsWith(".html")) return content;
+
+    const namedLayouts = ["full", "pair", "feature", "triptych", "mosaic"];
+
+    return content.replace(/<p>([\s\S]*?)<\/p>/g, (match, inner) => {
+      // Paragraph must contain ONLY pictures and/or imgs (no text nodes)
+      const textOnly = inner
+        .replace(/<picture>[\s\S]*?<\/picture>/g, "")
+        .replace(/<img\b[^>]*>/g, "")
+        .trim();
+      if (textOnly.length > 0) return match;
+
+      // Collect items preserving order
+      const items = [];
+      const itemRe = /(<picture>[\s\S]*?<\/picture>|<img\b[^>]*>)/g;
+      let m;
+      while ((m = itemRe.exec(inner)) !== null) items.push(m[1]);
+      if (items.length < 2) return match; // single image: leave as-is
+
+      // Layout hint from first alt value
+      const firstAlt = (inner.match(/alt="([^"]*)"/) || [])[1] || "";
+      const pipeIdx  = firstAlt.indexOf("|");
+      const prefix   = pipeIdx >= 0 ? firstAlt.slice(0, pipeIdx) : "";
+
+      let layout   = "";
+      let gridCols = "";
+
+      if (namedLayouts.includes(prefix)) {
+        layout = prefix;
+      } else {
+        // Numeric weights or plain alts → derive fr columns per item
+        const weights = items.map(item => {
+          const alt = (item.match(/alt="([^"]*)"/) || [])[1] || "";
+          const p   = alt.indexOf("|");
+          const w   = p >= 0 ? parseInt(alt.slice(0, p)) : NaN;
+          return isNaN(w) ? 1 : w;
+        });
+        gridCols = weights.map(w => `${w}fr`).join(" ");
+      }
+
+      // Strip layout/weight prefix from all alt texts  (anything before first |)
+      const processed = inner.replace(/alt="([^|"]*)\|([^"]*)"/g, 'alt="$2"');
+
+      const dataLayout = layout   ? ` data-layout="${layout}"`          : "";
+      const style      = gridCols ? ` style="--gallery-cols:${gridCols}"` : "";
+
+      return `<div class="gallery"${dataLayout}${style}>${processed.trim()}</div>`;
+    });
+  });
+
   const isDev = !!process.env.DEV;
   const isStaging = process.env.PATH_PREFIX === "/preview";
 

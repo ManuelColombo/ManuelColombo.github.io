@@ -1,0 +1,36 @@
+#!/bin/sh
+# Auto-ottimizza le immagini staged in assets/blog/ prima del commit su Local_writing.
+# Attivare una volta con: git config core.hooksPath .githooks
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+[ "$BRANCH" = "Local_writing" ] || exit 0
+
+STAGED=$(git diff --cached --name-only --diff-filter=ACM | grep -iE '^assets/blog/.+\.(jpg|jpeg)$')
+[ -n "$STAGED" ] || exit 0
+
+command -v node >/dev/null 2>&1 \
+  || { echo "[pre-commit] node non trovato, ottimizzazione saltata."; exit 0; }
+
+[ -f "scripts/optimize-image.js" ] \
+  || { echo "[pre-commit] scripts/optimize-image.js non trovato, ottimizzazione saltata."; exit 0; }
+
+node -e "require('sharp')" 2>/dev/null \
+  || { echo "[pre-commit] sharp non installato (npm install --save-dev sharp), ottimizzazione saltata."; exit 0; }
+
+echo "[pre-commit] Ottimizzazione immagini staged..."
+
+FAILED=0
+for img in $STAGED; do
+  dir=$(dirname "$img")
+  node scripts/optimize-image.js "$img" --out "$dir" || FAILED=1
+done
+
+if [ "$FAILED" -ne 0 ]; then
+  echo "[pre-commit] Ottimizzazione fallita. Commit annullato."
+  exit 1
+fi
+
+# Re-staging: i file potrebbero essere stati modificati in-place
+git add assets/blog/
+
+echo "[pre-commit] Immagini ottimizzate."

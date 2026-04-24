@@ -382,6 +382,111 @@ footer {
   font-size: var(--base-font-small);
 }
 
+/* ── Gallery ─────────────────────────────────────────────── */
+
+/*
+  Sintassi markdown per le gallerie (post con layout photo_post.njk):
+
+  Due o più immagini consecutive senza riga vuota → gruppo galleria.
+
+  Alt text controls:
+    ![caption](url)           → peso 1 (default)
+    ![2|caption](url)         → peso numerico (fr unit)
+    ![pair|caption](url)      → layout predefinito (sul primo del gruppo)
+
+  Named layouts: full · pair · feature · triptych · mosaic
+*/
+
+.gallery {
+  display: grid;
+  grid-template-columns: var(--gallery-cols, 1fr 1fr);
+  gap: 0.25rem;
+  margin: 2rem 0;
+}
+
+/* picture è display:contents globalmente, ma nel grid deve essere un item */
+.gallery picture {
+  display: block;
+  overflow: hidden;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: none;
+  border-radius: 0;
+  margin-block: 0;
+}
+
+/* ── Named layouts ───────────────────────────────────────── */
+.gallery[data-layout="full"]     { grid-template-columns: 1fr; }
+.gallery[data-layout="pair"]     { grid-template-columns: 1fr 1fr; }
+.gallery[data-layout="feature"]  { grid-template-columns: 3fr 2fr; }
+.gallery[data-layout="triptych"] { grid-template-columns: 1fr 1fr 1fr; }
+
+.gallery[data-layout="mosaic"] {
+  grid-template-columns: 2fr 1fr;
+  align-items: stretch;
+}
+.gallery[data-layout="mosaic"] picture:first-child {
+  grid-row: 1 / span 2;
+}
+.gallery[data-layout="mosaic"] picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Mobile: sempre colonna singola ──────────────────────── */
+@media (max-width: 640px) {
+  .gallery,
+  .gallery[data-layout] {
+    grid-template-columns: 1fr !important;
+    --gallery-cols: 1fr !important;
+  }
+  .gallery[data-layout="mosaic"] picture:first-child {
+    grid-row: auto;
+  }
+  .gallery[data-layout="mosaic"] picture img {
+    height: auto;
+  }
+}
+
+/* ── Photo post: testo in colonna, gallerie nella colonna ── */
+.photo-post main {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.photo-post main > *:not(.gallery) {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.photo-post .gallery {
+  gap: 0.35rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* ── Mosaic alternato: dispari = grande a sinistra,
+                        pari   = grande a destra ──────────── */
+.gallery[data-layout="mosaic"]:nth-child(even of .gallery[data-layout="mosaic"]) {
+  grid-template-columns: 1fr 2fr;
+}
+.gallery[data-layout="mosaic"]:nth-child(even of .gallery[data-layout="mosaic"]) picture:first-child {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+@media (max-width: 640px) {
+  .gallery[data-layout="mosaic"]:nth-child(even of .gallery[data-layout="mosaic"]) picture:first-child {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
 /* ── Dark mode ───────────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
   :root {

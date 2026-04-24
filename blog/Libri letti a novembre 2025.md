@@ -1,6 +1,6 @@
 ---
 layout: blog_post.njk
-date: 2026-04-03
+date: 2026-04-21
 tags: ["blog", "libri", "lettura"]
 permalink: "/blog/letture-novembre-2025/"
 title: "I libri che ho letto a Novembre 2025"
@@ -57,18 +57,18 @@ Il mito offre due realtà contraddittorie: occorre trovare un modo per accettarl
 
 > La letteratura è il luogo di ciò che non è vincolante
 
-Sequenza dei capitoli:
-I. Tempo del Grande Corvo
-II. La Sovrana degli Animali
-III. Il giavellotto dalla punta d'oro
-IV. La breve età degli eroi
-V. Sapienti e predatori
-VI. L'ultima notte di Zeus sulla terra
-VII. Suma fui
-VIII. Consiglio Notturno
-IX. La notte degli ermocopidi
-X. Il contemplante
-XI. Statue
-XII. O Egitto, Egitto...
-XIII. Il divino prima degli dèi
-XIV. Il ritorno a Eleusi
+Solo l'indice, la sequenza dei capitoli può dare un'idea del viaggio all'interno di questa epopea:
+- I. Tempo del Grande Corvo
+- II. La Sovrana degli Animali
+- III. Il giavellotto dalla punta d'oro
+- IV. La breve età degli eroi
+- V. Sapienti e predatori
+- VI. L'ultima notte di Zeus sulla terra
+- VII. Suma fui
+- VIII. Consiglio Notturno
+- IX. La notte degli ermocopidi
+- X. Il contemplante
+- XI. Statue
+- XII. O Egitto, Egitto...
+- XIII. Il divino prima degli dèi
+- XIV. Il ritorno a Eleusi

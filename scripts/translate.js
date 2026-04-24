@@ -48,7 +48,7 @@ Rules:
 - Keep book titles, film titles, and proper names in their original language,
   adding the English title in parentheses only if it's widely known by a different name.
 - Do not translate YAML front matter fields: layout, permalink, date, tags, category,
-  thumbnail, excerpt. Translate only: title, description, and the body content.
+  thumbnail. Translate only: title, description, excerpt, and the body content.
 - Internal links starting with /blog/ must be changed to /en/blog/.
 - Do not add explanatory context that isn't in the original.
 - If a sentence is deliberately ambiguous or incomplete in Italian, keep it so in English.
@@ -58,6 +58,7 @@ Rules:
 Output format — respond with EXACTLY these lines, no preamble, no commentary:
 TITLE: [translated title on a single line]
 DESCRIPTION: [translated description on a single line, or empty if none]
+EXCERPT: [translated excerpt on a single line, or empty if none]
 [blank line]
 [translated body markdown — everything after this blank line]`;
 
@@ -70,9 +71,10 @@ function contentHash(body, title) {
     .slice(0, 16);
 }
 
-async function callClaude(client, title, description, body) {
+async function callClaude(client, title, description, excerpt, body) {
   const userMessage = `TITLE: ${title}
 DESCRIPTION: ${description || ''}
+EXCERPT: ${excerpt || ''}
 
 ${body}`;
 
@@ -86,22 +88,25 @@ ${body}`;
   const text  = response.content[0].text.trim();
   const lines = text.split('\n');
 
-  const titleLine = lines.find(l => l.startsWith('TITLE:'));
-  const descLine  = lines.find(l => l.startsWith('DESCRIPTION:'));
+  const titleLine   = lines.find(l => l.startsWith('TITLE:'));
+  const descLine    = lines.find(l => l.startsWith('DESCRIPTION:'));
+  const excerptLine = lines.find(l => l.startsWith('EXCERPT:'));
 
   // Body starts after the blank line that follows the header section
-  let bodyStart = 2; // default: skip TITLE + DESCRIPTION lines
+  const headerPrefixes = ['TITLE:', 'DESCRIPTION:', 'EXCERPT:'];
+  let bodyStart = 3; // default: skip TITLE + DESCRIPTION + EXCERPT lines
   for (let i = 0; i < lines.length; i++) {
     if (i > 0 && lines[i].trim() === '' &&
-        (lines[i - 1].startsWith('TITLE:') || lines[i - 1].startsWith('DESCRIPTION:'))) {
+        headerPrefixes.some(p => lines[i - 1].startsWith(p))) {
       bodyStart = i + 1;
       break;
     }
   }
 
   return {
-    title:       titleLine ? titleLine.replace(/^TITLE:\s*/, '').trim()       : title,
-    description: descLine  ? descLine.replace(/^DESCRIPTION:\s*/, '').trim() : (description || ''),
+    title:       titleLine   ? titleLine.replace(/^TITLE:\s*/, '').trim()       : title,
+    description: descLine    ? descLine.replace(/^DESCRIPTION:\s*/, '').trim()  : (description || ''),
+    excerpt:     excerptLine ? excerptLine.replace(/^EXCERPT:\s*/, '').trim()   : (excerpt || ''),
     body:        lines.slice(bodyStart).join('\n').trim(),
   };
 }
@@ -149,6 +154,7 @@ async function processFile(client, srcPath, destPath, enPermalink) {
     client,
     srcFm.title       || '',
     srcFm.description || '',
+    srcFm.excerpt     || '',
     srcBody
   );
 
@@ -158,6 +164,7 @@ async function processFile(client, srcPath, destPath, enPermalink) {
   newFm.lang                 = 'en';
   newFm.title                = translated.title;
   if (translated.description) newFm.description = translated.description;
+  if (translated.excerpt)     newFm.excerpt     = translated.excerpt;
   newFm.permalink            = enPermalink;
   newFm.source               = srcPath;
   newFm.source_hash          = currentHash;

@@ -1,0 +1,18 @@
+---
+layout: blog_post.njk
+date: 2026-04-21
+tags: ["blog", "libri", "lettura"]
+permalink: "/blog/letture-dicembre-2025/"
+title: "I libri che ho letto a dicembre 2025"
+category: "letture"
+thumbnail: /assets/blog/masthead-dicembre-2025.jpg
+excerpt: "I nostri progenitori ci consigliano."
+---
+
+![masthead|Mosaico della Caccia al cervo, Pella, IV sec. a.C.](/assets/blog/masthead-novembre-2025.jpg)
+
+Il salto, di Silvia Ferrara 
+Segni, figure e parole: viaggio all'origine dell'immaginazione
+
+Baudelaire, consigli ai giovani scrittori. 
+
