@@ -8,9 +8,7 @@ source_hash: 251bd927952c122d
 translation_reviewed: false
 ---
 
-# {{ title }}
-
-## Manuel Colombo
+# Manuel Colombo
 **Experience Lead**, Publicis Sapient Italy
 Cuggiono, Lombardia, Italia
 [linkedin :: manuelcolombo](www.linkedin.com/in/manuelcolombo)
