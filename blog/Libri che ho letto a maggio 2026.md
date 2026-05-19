@@ -1,7 +1,7 @@
 ---
 layout: blog_post.njk
 date: 2026-05-19
-tags: ["blog", "libri", "lettura"]
+tags: ["letture"]
 permalink: "/blog/letture-maggio-2026/"
 title: "I libri che ho letto a maggio 2026"
 category: "letture"

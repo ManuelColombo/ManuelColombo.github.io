@@ -1,11 +1,7 @@
 ---
-title: "Libri"
 layout: base.njk
 permalink: "/libri/"
+eleventyExcludeFromCollections: true
 ---
-
-# Libri
-
-*Ogni libro che leggo lascia una traccia. Qui le tengo insieme.*
-
-{% include "libri-list.njk" %}
+<script>window.location.replace("/blog/libri/");</script>
+<p><a href="/blog/libri/">Vai alla raccolta libri</a></p>

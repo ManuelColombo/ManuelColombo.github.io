@@ -1,7 +1,7 @@
 ---
 layout: blog_post.njk
 date: 2025-12-16
-tags: ["blog"]
+tags: ["letture"]
 permalink: "/blog/letture-settembre-2025/"
 title: "I libri che ho letto a Settembre 2025"
 category: "letture"
