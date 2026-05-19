@@ -55,7 +55,7 @@ Se il soggetto principale è fuori centro, si può spostare il focal point con l
 
 La sintassi richiede HTML grezzo nel `.md` (non funziona con `![masthead|...]`):
 
-```html
+```
 <figure data-layout="masthead" style="--focal: 30% 60%">
   <img src="/percorso/immagine.jpg" alt="Descrizione">
 </figure>

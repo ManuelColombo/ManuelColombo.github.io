@@ -3,13 +3,17 @@ layout: blog_post.njk
 date: 2026-04-21
 tags: ["letture"]
 permalink: "/blog/letture-gennaio-2026/"
-title: "I libri che ho letto a gennaio 2026"
+title: "I libri letti: gennaio 2026"
 category: "letture"
-thumbnail: /assets/blog/masthead-gennaio-2026.jpg
-excerpt: "-...--"
+thumbnail: /assets/blog/remagi.jpg
+excerpt: "Cosa resta di quello che, anche di eroico,  abbiamo fatto?"
 ---
 
-![masthead|Mosaico della Caccia al cervo, Pella, IV sec. a.C.](/assets/blog/masthead-novembre-2025.jpg)
+```html
+<figure data-layout="masthead" style="--focal: top 50%">
+  <img src="/assets/blog/remagi.jpg" alt="I tre re magi portano i doni">
+</figure>
+```
 
 # Gennaio 2026
 
