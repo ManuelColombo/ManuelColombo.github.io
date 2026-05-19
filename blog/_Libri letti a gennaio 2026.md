@@ -11,10 +11,10 @@ excerpt: "-...--"
 
 ![masthead|Mosaico della Caccia al cervo, Pella, IV sec. a.C.](/assets/blog/masthead-novembre-2025.jpg)
 
+# Gennaio 2026
 
-### I Re magi, di Cardini Franco
+- [**I Re Magi** — Franco Cardini](/blog/libri/i-re-magi/)
 
-### La vicevita, di Valerio Magrelli
+- [**La vicevita** — Valerio Magrelli](/blog/libri/la-vicevita/)
 
-### Exfanzia, di Valerio Magrelli
-
+- [**Exfanzia** — Valerio Magrelli](/blog/libri/exfanzia/)

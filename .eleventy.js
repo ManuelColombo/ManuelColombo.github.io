@@ -227,6 +227,13 @@ module.exports = function(eleventyConfig) {
       .reverse()
   );
 
+  // Book reviews (one page per book, under blog/libri/)
+  eleventyConfig.addCollection("libri", col =>
+    col.getFilteredByGlob("./blog/libri/*.md")
+      .filter(item => isDraftVisible(path.basename(item.inputPath)))
+      .sort((a, b) => a.date - b.date)
+  );
+
   // Italian approach pages (excludes lang:en)
   eleventyConfig.addCollection("approach", col =>
     col.getFilteredByTag("approach")

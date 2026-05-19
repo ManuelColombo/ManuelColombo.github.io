@@ -1,0 +1,4 @@
+<section class="libri-index">
+{% set meseCorrente = "" %}
+{% for libro in collections.libri | reverse %}{% if libro.data.mese_lettura != meseCorrente %}{% if meseCorrente != "" %}</ul>{% endif %}{% set meseCorrente = libro.data.mese_lettura %}<h2>{{ libro.data.mese_lettura }}</h2><ul>{% endif %}<li><a href="{{ libro.url }}">{{ libro.data.title }}</a> <span class="autore">{{ libro.data.autore }}</span>{% if libro.data.excerpt %}<p class="excerpt">{{ libro.data.excerpt }}</p>{% endif %}</li>{% endfor %}{% if meseCorrente != "" %}</ul>{% endif %}
+</section>

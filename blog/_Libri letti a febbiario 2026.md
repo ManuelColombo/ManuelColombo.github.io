@@ -11,20 +11,14 @@ excerpt: "-...--"
 
 ![masthead|Mosaico della Caccia al cervo, Pella, IV sec. a.C.](/assets/blog/masthead-novembre-2025.jpg)
 
-### Il profilo del Dada, di Valerio Magrelli
+# Febbraio 2026
 
+- [**Il profilo del Dada** — Valerio Magrelli](/blog/libri/il-profilo-del-dada/)
+  Il movimento che ha ucciso se stesso assieme a tutto il resto, ma ha creato un nuovo modo per l'arte.
 
-Qui si ripercorre la storia del movimento artistico che ha gettato le basi per tanta critica e speculazione sull arte. 
-L'amalgama di tanti personaggi differenti e la rinuncia, l'avversione ad ogni regola lo rendono ujn movimento inspiegabilmente coeso nelle differenze. Le divisioni, i contrasti, le uscita di scena premature fanno parte del fare artistico di tzara e compagni. 
-Questo momento irripetibile dove l'arte annulla l'opera rinnega l'artista e ribalta il punto di vista sull'azione artistica ha ucciso se stesso assieme a tutto il resto, ma ha creato un nuovo modo, e un nuovo mercato, per la nuova arte che sperimentiamo tutt'ora. 
-Le questioni poste sul caos, sulla copia, sull'effimero, sulla contaminazione con i linguaggi di massa, sono ancora attuali. 
-In questa epoca di macchine, non più inutili, di processi artificiali ma intelligenti, è d'obbligo una nuova riflessione sul ruolo e sul significato dell'arte. 
+- [**La storia dei Re Magi** — Giovanni di Hildesheim](/blog/libri/la-storia-dei-re-magi/)
 
-### La storia dei Re Magi, Giovanni di Hildesheim
+- [**Canti Goliardici Medievali** — a cura di Luisa Vertova](/blog/libri/canti-goliardici-medievali/)
 
-### Canti Goliardici Medievali, a cura di Luisa Vertova
-
-### Macchine fantastiche, di Antonio Castronuovo
-Manuale di stramberie e fantasie elettromeccaniche. 
-
-Una passeggiata di un flaneur della letteratura attraverso i protagonisti meccanici: robot, androidi, cyborg, marionette. 
+- [**Macchine fantastiche** — Antonio Castronuovo](/blog/libri/macchine-fantastiche/)
+  Manuale di stramberie e fantasie elettromeccaniche: robot, androidi, cyborg, marionette.

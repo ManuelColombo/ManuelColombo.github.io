@@ -11,8 +11,9 @@ excerpt: "I nostri progenitori ci consigliano."
 
 ![masthead|Mosaico della Caccia al cervo, Pella, IV sec. a.C.](/assets/blog/masthead-novembre-2025.jpg)
 
-Il salto, di Silvia Ferrara 
-Segni, figure e parole: viaggio all'origine dell'immaginazione
+# Dicembre 2025
 
-Baudelaire, consigli ai giovani scrittori. 
+- [**Il salto** — Silvia Ferrara](/blog/libri/il-salto/)
+  Segni, figure e parole: viaggio all'origine dell'immaginazione.
 
+- [**Consigli ai giovani scrittori** — Charles Baudelaire](/blog/libri/consigli-ai-giovani-scrittori/)
