@@ -6,7 +6,11 @@
       "Bash(npm install *)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/)",
       "Bash(rm \"/Users/mancolom/Documents/Personal Repo/ManuelColombo.github.io/blog/_Libri letti a dicembre 2025.en.md\" && echo \"rimosso\")",
-      "Bash(node scripts/translate.js)"
+      "Bash(node scripts/translate.js)",
+      "Bash(node scripts/optimize-image.js assets/blog/remagi.png)",
+      "Bash(git reset *)",
+      "Bash(git restore *)",
+      "Bash(git commit -m ' *)"
     ],
     "additionalDirectories": [
       "/Users/mancolom/Documents/Personal Repo/ManuelColombo.github.io/blog"
